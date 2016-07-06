@@ -1,4 +1,4 @@
-site_name: Docker
+site_name: Git
 pages:
 - "Home": 'index.md'
 markdown_extensions:
