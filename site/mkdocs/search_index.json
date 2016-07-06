@@ -2,263 +2,58 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Docker is an open platform for building, shipping and running distributed applications. It gives programmers, development teams and operations engineers the common toolbox they need to take advantage of the distributed and networked nature of modern applications.\n\n\n\n\nContent\n\n\n\n\nPart 1: Docker: Why and What?\n\n\nDocker vs Virtual Machine\n\n\nDocker Architecture (Images, Containers, Registry and Repository, Orchestration)\n\n\nInstallation\n\n\nUsage\n\n\nPart 2: Docker Dev\n\n\nCreate new image\n\n\nPart 3: Docker Ops\n\n\nManage containers\n\n\nManage images\n\n\nPart 4: Docker More?\n\n\n\n\nTalks\n\n\n\n\nGetting Started with Apache Spark and Neo4j Using Docker Compose\n\n\nDocker fundamentals: basics, storage, networking - Introduction to Docker\n\n\n\n\nCourses\n\n\nDocker Training\n, Official from Docker\n\n\n\n\nIntroduction to Docker\n\n\n\n\n\n\n\n\n\n\n\n\nGet started with images\n\n\n\n\n\n\nGet started with containers\n\n\n\n\n\n\nDocker Training, Introduction to Docker\n\n\n\n\n\n\nHow to remove unused Docker containers and images", 
+            "text": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.\n\n\n\n\nFile Status Lifecycle and Commits\n\n\n1\n\n\n\n\n# Add file contents to the index\ngit add [filename]\n# Record changes to the repository\ngit commit -m [message]\n# Reset current HEAD to the specified state\ngit reset HEAD~1\n# Switch branches or restore working tree files\ngit checkout HEAD~2\n\n\n\n\nView Status\n\n\ngit status\ngit log\ngit log --since=2015-12-01\ngit log --until=2015-12-01\ngit log --author=\nmagizbox\n\ngit log --grep=\nInit\n\ngit log --oneline origin/master\n\n\n\n\nBranches\n\n\n2\n\n\ncheck in\u00a0early, check in often\n what is `master`?\n\n\n\nA \nbranch\n represents an independent line of development. Branches serve as an abstraction for the \nedit \n stage \n commit\n process discussed in Git Basics, the first module of this series. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.\n\n\ngit branches diagram\n\n\n\n\n\n\nLocal Branches\n\n\n# view branches\ngit branch\n# create new branch\ngit checkout -b [branchname]\n# switch to a branch\ngit checkout [branchname]\n# delete branch\ngit branch -D [branchname]\n\n\n\n\nMerge\u00a0Branches\n\n\ngit merge [branchname]\n\n\n\n\nRemote Branches\n\n\n3\n\n\n# delete remote branches\ngit push origin --delete [branchname]\n\n\n\n\nRepositories\n\n\n\n\n  what is \norigin\n?\n\n\n\n\n# view remote branches\ngit remote -v\n# add remote branches\ngit remote add [repositoryname] [branch_url]\n# clone a repository into a new directory\ngit clone\n# push to repository\ngit push [repositoryname] [branchname]\ngit pull\n\n\n\n\nGit Configurations\n\n\nKnown Issues\n\n\n\n\nHow do I force git to use LF instead of CR+LF under windows?\n\n\n\n\ngit config --global core.autocrlf false\n\n\n\n\nPower Tools with Github\n\n\n\n \nIssues \n Milestones\n \n4\n\n\nIssues are a great way to keep track of tasks, enhancements, and bugs for your projects. They\u2019re kind of like email\u2014except they can be shared and discussed with the rest of your team. Most software projects have a bug tracker of some kind. GitHub\u2019s tracker is called \nIssues\n, and has its own section in every repository.\n\n\n\n\nCode\n\n\n8\n\n\n# commit to fix issue\ngit commit -m \nfix #34\n\n\n\n\n\nOnce you\u2019ve collected a lot of issues, you may find it hard to find the ones you care about. \nMilestones\n, labels, and assignees are great features to filter and categorize issues. A \nmilestone\n acts like a container for issues. This is useful for associating issues with specific features or project phases\n\n\n\n \n\u00a0\n5\n \n\n\nPull requests\n let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.\n\n\n\n\n\n\u00a0\nWiki \n6\n \n\n\n\n\nJust as writing good code and great tests are important, excellent documentation helps others use and extend your project.\n\nEvery GitHub repository comes equipped with a section for hosting documentation, called a \nwiki\n.\n\n\n\n \n\n\n Repository Graphs \n7\n\n\nEvery repository has \ngraphs\n that display data about traffic, contributors, and commits.\n\n\n\n\n\nInterview\n\n\n\n\n10 Years of Git: An Interview with Git Creator Linus Torvalds\n\n\n\n\n\nLearn Git\n\n\n\n\n\nOfficial Git Tutorial\n\n\nGit Beginner's Guide for Dummies\n\n\n\n\n\nGit Submodule\n\n\n9\n\n\nAdd new submodule\n\n\ngit submodule add https://github.com/chaconinc/DbConnector\n\n\n\n\nUpdate submodule\n\n\ngit submodule init\ngit submodule update\n\n\n\n\nTips\n\n\n10\n \n11\n\n\n# Create an archive of files from a named tree\ngit archive --format=zip HEAD \n app.zip\n\n\n\n\nDev \n Release with Git\n\n\n\n\nFork\n \n create a \nPull Request\n with Github\n\n\n12\n \n13\n\n\n\n\nIn a reposiroty you want to fork, click \nFork\n button. It will create your own repository\n\n\nRun this:\n\n\n\n\ngit remote add origin [your_repository] # that have created when you fork\ngit remote add upstream [original_repository] # the repository that you have fork\n\n\n\n\n\n\nCode in your own repository \n commit\n\n\nGo to your Fork repository\n\n\nSwitch to your branch\n\n\nCreate Pull Request\n to send a merge request to the owner of the original repository\n\n\n\n\nDescription\n\n\n\n\nDevelopment Branch\n\n\nIt use for debugging, coding, testing\n\n\nIt must have \ncode\n and \ntests\n\n\nRelease Branch\n\n\nIt use for running, including\n\n\nIt must have \ndocuments\n (\nAPI.md\n, \nHOW_TO_INSTALL.md\n, \nHOW_TO_RUN.md\n) and \nresources\n (executable and resource files) in \nrelease\n folder.\n\n\nRelease Branch doesn't care about code. It only care about \nrelease\n folder.\n\n\n\n\nRule of thumb\n\n\n\n\nRule 1: Don't code in 2 \ndev\n components at the same time. Do write tests instead.\n\n\nRule 2: Do pull \nrelease\n before switch code from a component to other.\n\n\nRule 3: Do include \nrelease\n version of other components in case reuse (component A include component B).\n\n\nRule 4: Don't \ncode\n and \ndebug\n in \nrelease\n branch, only \nmerge\n  or \npull\n (from \ndev\n)\n\n\n\n\n\n\n\n\n\n\n\n\nhttp://git-scm.com/book/ca/v1/Git-Basics-Recording-Changes-to-the-Repository\n\n\n\n\n\n\nhttps://www.atlassian.com/git/tutorials/using-branches/\n\n\n\n\n\n\nhttp://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely/2003515#2003515\n\n\n\n\n\n\nhttps://guides.github.com/features/issues/\n\n\n\n\n\n\nhttps://help.github.com/articles/using-pull-requests/\n\n\n\n\n\n\nhttps://help.github.com/articles/about-github-wikis/\n\n\n\n\n\n\nhttps://help.github.com/articles/about-repository-graphs/\n\n\n\n\n\n\nClosing an issue in the same repository\n\n\n\n\n\n\nGit Tools - Submodules\n\n\n\n\n\n\nGit: how to get all the files changed and new files in a folder or zip?\n\n\n\n\n\n\ngit-scm.com: git-archive\n\n\n\n\n\n\nForking a Repo\n\n\n\n\n\n\nUsing pull request", 
             "title": "Home"
         }, 
         {
-            "location": "/#content", 
-            "text": "Part 1: Docker: Why and What?  Docker vs Virtual Machine  Docker Architecture (Images, Containers, Registry and Repository, Orchestration)  Installation  Usage  Part 2: Docker Dev  Create new image  Part 3: Docker Ops  Manage containers  Manage images  Part 4: Docker More?", 
-            "title": "Content"
+            "location": "/#file-status-lifecycle-and-commits", 
+            "text": "1   # Add file contents to the index\ngit add [filename]\n# Record changes to the repository\ngit commit -m [message]\n# Reset current HEAD to the specified state\ngit reset HEAD~1\n# Switch branches or restore working tree files\ngit checkout HEAD~2", 
+            "title": "File Status Lifecycle and Commits"
         }, 
         {
-            "location": "/#talks", 
-            "text": "Getting Started with Apache Spark and Neo4j Using Docker Compose  Docker fundamentals: basics, storage, networking - Introduction to Docker", 
-            "title": "Talks"
+            "location": "/#view-status", 
+            "text": "git status\ngit log\ngit log --since=2015-12-01\ngit log --until=2015-12-01\ngit log --author= magizbox \ngit log --grep= Init \ngit log --oneline origin/master", 
+            "title": "View Status"
         }, 
         {
-            "location": "/#courses", 
-            "text": "Docker Training , Official from Docker   Introduction to Docker       Get started with images    Get started with containers    Docker Training, Introduction to Docker    How to remove unused Docker containers and images", 
-            "title": "Courses"
+            "location": "/#branches", 
+            "text": "2  check in\u00a0early, check in often  what is `master`?  A  branch  represents an independent line of development. Branches serve as an abstraction for the  edit   stage   commit  process discussed in Git Basics, the first module of this series. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.  git branches diagram   Local Branches  # view branches\ngit branch\n# create new branch\ngit checkout -b [branchname]\n# switch to a branch\ngit checkout [branchname]\n# delete branch\ngit branch -D [branchname]  Merge\u00a0Branches  git merge [branchname]  Remote Branches  3  # delete remote branches\ngit push origin --delete [branchname]", 
+            "title": "Branches"
         }, 
         {
-            "location": "/intro/", 
-            "text": "[embed]https://www.youtube.com/watch?v=cRczhEvSH2A[/embed]\n\n\nDocker Promise \n6\n \n7\n\n\n\n\nDocker provides an integrated technology suite that enables development and IT operations teams to build, ship, and run distributed applications anywhere.\n\n\n\n\n\n\nBuild\n: Docker allows you to compose your application from microservices, without worrying about inconsistencies between development and production environments, and without locking into any platform or language.\n\n\nComposable\n You want to be able to split up your application into multiple services.\n\n\nShip\n: Docker lets you design the entire cycle of application development, testing and distribution, and manage it with a consistent user interface.\n\n\nPortable across providers\n You want to be able to move your application between different cloud providers and your own servers, or run it across several providers.\n\n\nRun\n: Docker offers you the ability to deploy scalable services, securely and reliably, on a wide variety of platforms.\n\n\nPortable across environments\n You want to be able to define how your application will run in development, and then run it seamlessly in testing, staging and production.\n\n\n1. Docker Architecture \n3\n\n\n\n\nDocker Containers vs Virtual Hypervisor Model\n \n1\n\n\n\n\nIn the Docker container model, the Docker engine sits atop a single host operating system. In contrast, with the traditional virtualization hypervisor mode, a separate guest operating system is required for each virtual machine.\n\n\nDocker Images and Docker Containers\n\n\n\n\n2.1 Docker Images \n2\n\n\n\n\nDocker images are the \nbuild component\n of Docker.\n\n\n\n\nFor example, an image could contain an Ubuntu operating system with Apache and your web application installed. Images are used to create Docker containers.\n\n\nDocker provides a simple way to build new images or update existing images, or you can download Docker images that other people have already created.\n\n\nBuilt by you or other Docker users\n\n\nStored in the Docker Hub or your local Registry\n\n\nImages Tags\n\n\n\n\nImages are specified by repository:tag\n\n\nThe same image my have multiple tags\n\n\nThe default tag is \nlastest\n\n\nLook up the repository on Docker to see what tags are available\n\n\n\n\n2.2 Docker Containers \n3\n\n\n\n\nDocker containers are the \nrun component\n of Docker.\n\n\n\n\nDocker containers are similar to a directory. A Docker container holds everything that is needed for an application to run. Each container is created from a Docker image. Docker containers can be run, started, stopped, moved, and deleted. Each container is an isolated and secure application platform.\n\n\n2.3 Registry and Repository\n\n\n\n\nDocker registries are the \ndistribution component\n of Docker.\n\n\n\n\nDocker registries\n\n\nDocker registries hold images. These are public or private stores from which you upload or download images. The public Docker registry is provided with the Docker Hub. It serves a huge collection of existing images for your use. These can be images you create yourself or you can use images that others have previously created.\nDocker Hub\n\n\nDocker Hub is the public registry that contains a large number of images available for your use.\n\n\n2.3 Docker Networking \n5\n\n\n\n\nDocker use DNS instead \netc/hosts\n\n\n\n\n3. Docker Orchestration \n2\n\n\n\n\nThree tools for orchestrating distributed applications with Docker\n\n\nDocker Machine\n\n\nTool that provisions Docker hosts and installs the Docker Engine on them\n\n\n\n\n\n\nDocker Swarm\n\n\nTool that clusters many Engines and schedules containers\n\n\n\n\n\n\nDocker Compose\n\n\nTool to create and manage multi-container applications\n\n\n\n\n\n\n\n\nInstallation\n\n\nDocker only supports \nCentOS 7,  Windows 7.1, 8/8.1, Mac OSX 10.8\n \n64bit\n\n\nWindows\n, \nCentOS\n\n\nUsage\n\n\nLab: Search for Images on Docker Hub\n\n\nInstallation: Ubuntu\n\n\nInstallation \n1\n\n\nubuntu 14.04\n\n\nPrerequisites\n\n\napt-get update\napt-get install apt-transport-https ca-certificates\n\napt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D\n\n\n\n\nEdit \n/etc/apt/sources.list.d/docker.list\n\n\ndeb https://apt.dockerproject.org/repo ubuntu-trusty main\n\n\n\n\napt-get update\napt-get purge lxc-docker\napt-cache policy docker-engine\n\n\n\n\nInstall docker\n\n\napt-get update\napt-get install -y --force-yes docker-engine\nservice docker start\n\n\n\n\nRun Docker\n\n\ndocker run hello-world\ndocker info\ndocker version\n\n\n\n\nInstallation \n1\n\n\nhttps://www.docker.com/products/docker-toolbox\n\n\n\n\nGo to the \nDocker Toolbox\n page.\n\n\nClick the installer link to download.\n\n\nInstall Docker Toolbox by double-clicking the installer.\n\n\n\n\nDocker: CentOS 7\n\n\nInstallation \n1\n\n\nInstall Docker\n\n\n# make sure your existing yum packages are up-to-date.\nsudo yum -y update\n\n# add docker repo\nsudo tee /etc/yum.repos.d/docker.repo \n-'EOF'\n[dockerrepo]\nname=Docker Repository\nbaseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/\nenabled=1\ngpgcheck=1\ngpgkey=https://yum.dockerproject.org/gpg\nEOF\n\n# install the Docker package.\nsudo yum install -y docker-engine\n\n# start the Docker daemon\nsudo service docker start\n\n# verify\nsudo docker run hello-world\n\n\n\n\nInstall Docker Compose\n\n\nsudo yum install epel-release\nsudo yum install -y python-pip\n\nsudo pip install docker-compose\n\n\n\n\nDocker 1.10.3\n\n\nKitematic\n\n\nPort Forwarding\n\n\nOpen Virtualbox\n\n\nVolumes\n\n\n\n\n\n\n\n\n\n\nInstall Docker for Windows\n\n\n\n\n\n\nSelf Paced Training, Docker Fundamentals\n\n\n\n\n\n\nUnderstand the architecture\n\n\n\n\n\n\nUnderstand the architecture\n\n\n\n\n\n\nDocker Compose and Networking\n\n\n\n\n\n\nhttps://www.docker.com/\n\n\n\n\n\n\nOrchestrating Docker with Machine, Swarm and Compose", 
-            "title": "Introduction"
+            "location": "/#git-configurations", 
+            "text": "Known Issues   How do I force git to use LF instead of CR+LF under windows?   git config --global core.autocrlf false", 
+            "title": "Git Configurations"
         }, 
         {
-            "location": "/intro/#docker-promise-6-7", 
-            "text": "Docker provides an integrated technology suite that enables development and IT operations teams to build, ship, and run distributed applications anywhere.    Build : Docker allows you to compose your application from microservices, without worrying about inconsistencies between development and production environments, and without locking into any platform or language.  Composable  You want to be able to split up your application into multiple services.  Ship : Docker lets you design the entire cycle of application development, testing and distribution, and manage it with a consistent user interface.  Portable across providers  You want to be able to move your application between different cloud providers and your own servers, or run it across several providers.  Run : Docker offers you the ability to deploy scalable services, securely and reliably, on a wide variety of platforms.  Portable across environments  You want to be able to define how your application will run in development, and then run it seamlessly in testing, staging and production.", 
-            "title": "Docker Promise 6 7"
+            "location": "/#git-submodule", 
+            "text": "9  Add new submodule  git submodule add https://github.com/chaconinc/DbConnector  Update submodule  git submodule init\ngit submodule update", 
+            "title": "Git Submodule"
         }, 
         {
-            "location": "/intro/#1-docker-architecture-3", 
-            "text": "Docker Containers vs Virtual Hypervisor Model   1   In the Docker container model, the Docker engine sits atop a single host operating system. In contrast, with the traditional virtualization hypervisor mode, a separate guest operating system is required for each virtual machine.  Docker Images and Docker Containers", 
-            "title": "1. Docker Architecture 3"
+            "location": "/#tips", 
+            "text": "10   11  # Create an archive of files from a named tree\ngit archive --format=zip HEAD   app.zip", 
+            "title": "Tips"
         }, 
         {
-            "location": "/intro/#21-docker-images-2", 
-            "text": "Docker images are the  build component  of Docker.   For example, an image could contain an Ubuntu operating system with Apache and your web application installed. Images are used to create Docker containers.  Docker provides a simple way to build new images or update existing images, or you can download Docker images that other people have already created.  Built by you or other Docker users  Stored in the Docker Hub or your local Registry  Images Tags   Images are specified by repository:tag  The same image my have multiple tags  The default tag is  lastest  Look up the repository on Docker to see what tags are available", 
-            "title": "2.1 Docker Images 2"
-        }, 
-        {
-            "location": "/intro/#22-docker-containers-3", 
-            "text": "Docker containers are the  run component  of Docker.   Docker containers are similar to a directory. A Docker container holds everything that is needed for an application to run. Each container is created from a Docker image. Docker containers can be run, started, stopped, moved, and deleted. Each container is an isolated and secure application platform.", 
-            "title": "2.2 Docker Containers 3"
-        }, 
-        {
-            "location": "/intro/#23-registry-and-repository", 
-            "text": "Docker registries are the  distribution component  of Docker.   Docker registries  Docker registries hold images. These are public or private stores from which you upload or download images. The public Docker registry is provided with the Docker Hub. It serves a huge collection of existing images for your use. These can be images you create yourself or you can use images that others have previously created.\nDocker Hub  Docker Hub is the public registry that contains a large number of images available for your use.", 
-            "title": "2.3 Registry and Repository"
-        }, 
-        {
-            "location": "/intro/#23-docker-networking-5", 
-            "text": "Docker use DNS instead  etc/hosts", 
-            "title": "2.3 Docker Networking 5"
-        }, 
-        {
-            "location": "/intro/#3-docker-orchestration-2", 
-            "text": "Three tools for orchestrating distributed applications with Docker  Docker Machine  Tool that provisions Docker hosts and installs the Docker Engine on them    Docker Swarm  Tool that clusters many Engines and schedules containers    Docker Compose  Tool to create and manage multi-container applications", 
-            "title": "3. Docker Orchestration 2"
-        }, 
-        {
-            "location": "/intro/#installation", 
-            "text": "Docker only supports  CentOS 7,  Windows 7.1, 8/8.1, Mac OSX 10.8   64bit  Windows ,  CentOS", 
-            "title": "Installation"
-        }, 
-        {
-            "location": "/intro/#usage", 
+            "location": "/#dev-release-with-git", 
             "text": "", 
-            "title": "Usage"
+            "title": "Dev &amp; Release with Git"
         }, 
         {
-            "location": "/intro/#lab-search-for-images-on-docker-hub", 
-            "text": "", 
-            "title": "Lab: Search for Images on Docker Hub"
+            "location": "/#fork-create-a-pull-request-with-github", 
+            "text": "12   13   In a reposiroty you want to fork, click  Fork  button. It will create your own repository  Run this:   git remote add origin [your_repository] # that have created when you fork\ngit remote add upstream [original_repository] # the repository that you have fork   Code in your own repository   commit  Go to your Fork repository  Switch to your branch  Create Pull Request  to send a merge request to the owner of the original repository", 
+            "title": "Fork &amp; create a Pull Request with Github"
         }, 
         {
-            "location": "/intro/#installation-ubuntu", 
-            "text": "", 
-            "title": "Installation: Ubuntu"
+            "location": "/#description", 
+            "text": "Development Branch  It use for debugging, coding, testing  It must have  code  and  tests  Release Branch  It use for running, including  It must have  documents  ( API.md ,  HOW_TO_INSTALL.md ,  HOW_TO_RUN.md ) and  resources  (executable and resource files) in  release  folder.  Release Branch doesn't care about code. It only care about  release  folder.", 
+            "title": "Description"
         }, 
         {
-            "location": "/intro/#installation-1", 
-            "text": "ubuntu 14.04  Prerequisites  apt-get update\napt-get install apt-transport-https ca-certificates\n\napt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D  Edit  /etc/apt/sources.list.d/docker.list  deb https://apt.dockerproject.org/repo ubuntu-trusty main  apt-get update\napt-get purge lxc-docker\napt-cache policy docker-engine  Install docker  apt-get update\napt-get install -y --force-yes docker-engine\nservice docker start  Run Docker  docker run hello-world\ndocker info\ndocker version", 
-            "title": "Installation 1"
-        }, 
-        {
-            "location": "/intro/#installation-1_1", 
-            "text": "https://www.docker.com/products/docker-toolbox   Go to the  Docker Toolbox  page.  Click the installer link to download.  Install Docker Toolbox by double-clicking the installer.", 
-            "title": "Installation 1"
-        }, 
-        {
-            "location": "/intro/#docker-centos-7", 
-            "text": "", 
-            "title": "Docker: CentOS 7"
-        }, 
-        {
-            "location": "/intro/#installation-1_2", 
-            "text": "Install Docker  # make sure your existing yum packages are up-to-date.\nsudo yum -y update\n\n# add docker repo\nsudo tee /etc/yum.repos.d/docker.repo  -'EOF'\n[dockerrepo]\nname=Docker Repository\nbaseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/\nenabled=1\ngpgcheck=1\ngpgkey=https://yum.dockerproject.org/gpg\nEOF\n\n# install the Docker package.\nsudo yum install -y docker-engine\n\n# start the Docker daemon\nsudo service docker start\n\n# verify\nsudo docker run hello-world  Install Docker Compose  sudo yum install epel-release\nsudo yum install -y python-pip\n\nsudo pip install docker-compose  Docker 1.10.3", 
-            "title": "Installation 1"
-        }, 
-        {
-            "location": "/intro/#kitematic", 
-            "text": "", 
-            "title": "Kitematic"
-        }, 
-        {
-            "location": "/intro/#port-forwarding", 
-            "text": "Open Virtualbox", 
-            "title": "Port Forwarding"
-        }, 
-        {
-            "location": "/intro/#volumes", 
-            "text": "Install Docker for Windows    Self Paced Training, Docker Fundamentals    Understand the architecture    Understand the architecture    Docker Compose and Networking    https://www.docker.com/    Orchestrating Docker with Machine, Swarm and Compose", 
-            "title": "Volumes"
-        }, 
-        {
-            "location": "/dev/", 
-            "text": "Dev\n\n\nCreate New Image\n\n\n# Create new image by commit\ndocker commit \ncontainer ID\n \nyourname\n/curl:1.0\n\n# Build image\ndocker build -t ubuntu/test:1.0 .\ndocker build -t ubuntu/test:1.0 --no-cache .\n\n\n\n\nImport/Export Container \n1\n \n2\n\n\nExport the contents of a container's filesystem as a tar archive\n\n\ndocker export [OPTIONS] CONTAINER\ndocker export red_panda \n latest.tar\n\ndocker import file|URL|- [REPOSITORY[:TAG]]\ndocker import http://example.com/exampleimage.tgz\ncat exampleimage.tgz | docker import - exampleimagelocal:new\n\n\n\n\nSave/Load Image \n3\n \n4\n\n\nSave one or more images to a tar archive\n\n\ndocker save [OPTIONS] IMAGE [IMAGE...]\ndocker save busybox \n busybox.tar.gz\n\ndocker load [OPTIONS]\ndocker load \n busybox.tar.gz\n\n\n\n\nPush Images to Docker Hub\n\n\n# Login to docker hub\ndocker login --username=yourhubusername --email=youremail@company.com\n\n# push docker\ndocker push [repo:tag]\n\n# tag an image into a repository\ndocker tag [OPTIONS] IMAGE[:TAG] [REGISTRYHOST/][USERNAME/]NAME[:TAG]\n\n\n\n\nWindows\n\n\n5 Useful Docker Tips and Tricks on Windows\n\n\n\n\n\n\n\n\n\n\nCommandline Reference: export\n\n\n\n\n\n\nCommandline Reference: import\n\n\n\n\n\n\nCommandline Reference: save\n\n\n\n\n\n\nCommandline Reference: load", 
-            "title": "dev image"
-        }, 
-        {
-            "location": "/dev/#dev", 
-            "text": "", 
-            "title": "Dev"
-        }, 
-        {
-            "location": "/dev/#create-new-image", 
-            "text": "# Create new image by commit\ndocker commit  container ID   yourname /curl:1.0\n\n# Build image\ndocker build -t ubuntu/test:1.0 .\ndocker build -t ubuntu/test:1.0 --no-cache .", 
-            "title": "Create New Image"
-        }, 
-        {
-            "location": "/dev/#importexport-container-1-2", 
-            "text": "Export the contents of a container's filesystem as a tar archive  docker export [OPTIONS] CONTAINER\ndocker export red_panda   latest.tar\n\ndocker import file|URL|- [REPOSITORY[:TAG]]\ndocker import http://example.com/exampleimage.tgz\ncat exampleimage.tgz | docker import - exampleimagelocal:new", 
-            "title": "Import/Export Container 1 2"
-        }, 
-        {
-            "location": "/dev/#saveload-image-3-4", 
-            "text": "Save one or more images to a tar archive  docker save [OPTIONS] IMAGE [IMAGE...]\ndocker save busybox   busybox.tar.gz\n\ndocker load [OPTIONS]\ndocker load   busybox.tar.gz", 
-            "title": "Save/Load Image 3 4"
-        }, 
-        {
-            "location": "/dev/#push-images-to-docker-hub", 
-            "text": "# Login to docker hub\ndocker login --username=yourhubusername --email=youremail@company.com\n\n# push docker\ndocker push [repo:tag]\n\n# tag an image into a repository\ndocker tag [OPTIONS] IMAGE[:TAG] [REGISTRYHOST/][USERNAME/]NAME[:TAG]", 
-            "title": "Push Images to Docker Hub"
-        }, 
-        {
-            "location": "/dev/#windows", 
-            "text": "5 Useful Docker Tips and Tricks on Windows      Commandline Reference: export    Commandline Reference: import    Commandline Reference: save    Commandline Reference: load", 
-            "title": "Windows"
-        }, 
-        {
-            "location": "/dockerfile/", 
-            "text": "Dockerfile\n\n\n\n\nBuild a song with Dockerfile\n\n\n\n\nA dockerfile is a configuration file that contains instructions for building a Docker image.\n\n\n\n\nProvides a more effective way to build images compared to using docker commit\n\n\nEasily fits into your continuous integration and deployment process.\n\n\n\n\nCommand Line\n\n\n# `FROM` instruction specifies what the base image should be\nFROM java:7\n\n# `RUN` instruction specifies a command to execute\nRUN apt-get update \n apt-get install -y \\\n      curl \\\n      vim \\\n      openjdk-7-jdk\n\n# CMD\n# Defines a default command to execute when a container is created\nCMD [\nping\n, \n127.0.0.1\n, \n-c\n, \n30\n]\n\n# ENTRYPOINT\n# Defines the command that will run when a container is executed\nENTRYPOINT [\nping\n]\n\n\n\n\nVolumes\n\n\n\n\nConfiguration Files and Directories**\n\n\n\n\nCOPY \nsrc\n... \ndest\n\nCOPY hom* /mydir/        # adds all files starting with \nhom\n\nCOPY hom?.txt /mydir/    # ? is replaced with any single character, e.g., \nhome.txt\n\n\n\n\n\nNetworking\n\n\n\n\nPorts still need to be mapped when container is executed\n\n\n\n\n# EXPOSE\n# Configures which ports a container will listen on at runtime\nFROM ubuntu:14.04\nRUN apt-get update\nRUN apt-get install -y nginx\n\nEXPOSE 80 443\n\nCMD [\nnginx\n, \n-g\n, \ndaemon off;\n]\n\n\n\n\n2.4 Linking Containers\n\n\n\n\nExample: Web app container and Database container\n\n\n\n\nLinking is a communication method between containers which allows them to securely transfer data from one to another\n\n\n\n\nSource and recipient containers\n\n\nRecipient containers have access to data on source containers\n\n\nLinks are established based on container names\n\n\n\n\nCreate a Link\n\n\n\n\nCreate the source container first\n\n\n\n\nCreate the recipient container and use the \n--link\n option\n\n\n\n\n\n\nBest practice\n - give your containers meaningful names\n\n\n\n\n\n\nCreate the source container using the postgres\ndocker run -d --name database postgres\n\nCreate the recipient container and link it\ndocker run -d -P --name website --link database:db nginx\n\n\n\n\nUses of Linking\n\n\n\n\nContainers can talk to each other without having to expose ports to the host\n\n\nEssential for micro service application architecture\n\n\nExample:\n\n\nContainer with the Tomcat running\n\n\nContainer with the MySQL running\n\n\nApplication on Tomcat needs to connect to MySQL\n\n\n\n\n\n\n\n\nOperating Systems for Docker \n1\n \n2\n\n\n\n\n\n\nOperating System\n\n\nFeatures\n\n\n\n\n\n\nCoreOS\n\n\nService Discovery, Cluster management, Auto-updates\n\nCoreOS is designed for security, consistency, and reliability. Instead of installing packages via yum or apt, CoreOS uses Linux containers to manage your services at a higher level of abstraction. A single service\u2019s code and all dependencies are packaged within a container that can be run on one or many CoreOS machines\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe New Minimalist Operating Systems\n\n\n\n\n\n\nTop 5 operating systems for your Docker infrastructure", 
-            "title": "dockerfile"
-        }, 
-        {
-            "location": "/dockerfile/#dockerfile", 
-            "text": "Build a song with Dockerfile   A dockerfile is a configuration file that contains instructions for building a Docker image.   Provides a more effective way to build images compared to using docker commit  Easily fits into your continuous integration and deployment process.   Command Line  # `FROM` instruction specifies what the base image should be\nFROM java:7\n\n# `RUN` instruction specifies a command to execute\nRUN apt-get update   apt-get install -y \\\n      curl \\\n      vim \\\n      openjdk-7-jdk\n\n# CMD\n# Defines a default command to execute when a container is created\nCMD [ ping ,  127.0.0.1 ,  -c ,  30 ]\n\n# ENTRYPOINT\n# Defines the command that will run when a container is executed\nENTRYPOINT [ ping ]  Volumes   Configuration Files and Directories**   COPY  src ...  dest \nCOPY hom* /mydir/        # adds all files starting with  hom \nCOPY hom?.txt /mydir/    # ? is replaced with any single character, e.g.,  home.txt   Networking   Ports still need to be mapped when container is executed   # EXPOSE\n# Configures which ports a container will listen on at runtime\nFROM ubuntu:14.04\nRUN apt-get update\nRUN apt-get install -y nginx\n\nEXPOSE 80 443\n\nCMD [ nginx ,  -g ,  daemon off; ]", 
-            "title": "Dockerfile"
-        }, 
-        {
-            "location": "/dockerfile/#24-linking-containers", 
-            "text": "Example: Web app container and Database container   Linking is a communication method between containers which allows them to securely transfer data from one to another   Source and recipient containers  Recipient containers have access to data on source containers  Links are established based on container names   Create a Link   Create the source container first   Create the recipient container and use the  --link  option    Best practice  - give your containers meaningful names    Create the source container using the postgres\ndocker run -d --name database postgres\n\nCreate the recipient container and link it\ndocker run -d -P --name website --link database:db nginx  Uses of Linking   Containers can talk to each other without having to expose ports to the host  Essential for micro service application architecture  Example:  Container with the Tomcat running  Container with the MySQL running  Application on Tomcat needs to connect to MySQL", 
-            "title": "2.4 Linking Containers"
-        }, 
-        {
-            "location": "/dockerfile/#operating-systems-for-docker-1-2", 
-            "text": "Operating System  Features    CoreOS  Service Discovery, Cluster management, Auto-updates \nCoreOS is designed for security, consistency, and reliability. Instead of installing packages via yum or apt, CoreOS uses Linux containers to manage your services at a higher level of abstraction. A single service\u2019s code and all dependencies are packaged within a container that can be run on one or many CoreOS machines        The New Minimalist Operating Systems    Top 5 operating systems for your Docker infrastructure", 
-            "title": "Operating Systems for Docker 1 2"
-        }, 
-        {
-            "location": "/compose/", 
-            "text": "Docker-Compose \n1\n\n\n\n\nCompose a symphony\n\n\n\n\nCompose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application\u2019s services. Then, using a single command, you create and start all the services from your configuration. To learn more about all the features of Compose see the list of features.\nDocker Compose \nDescribes the components of an application\n\n\nBox your component\n\n\n.component/\n\u251c\u2500\u2500 docker-compose.yml\n\u251c\u2500\u2500 app-1/\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 app/\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u251c\u2500\u2500 file-1\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 file-2\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 Dockerfile\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 run.sh\n\u2514\u2500\u2500 app-2/\n    \u251c\u2500\u2500 app/\n    \u2502\u00a0\u00a0 \u251c\u2500\u2500 file-1\n    \u2502\u00a0\u00a0 \u2514\u2500\u2500 file-2\n    \u251c\u2500\u2500 Dockerfile\n    \u2514\u2500\u2500 run.sh\n\n\n\n\nServices\n\n\nNetworks\n\n\nnetwork_mode\n, \nports\n, \nexternal_hosts\n, \nlink\n, \nnet\n\n\nnetwork_mode: \nbridge\n\nnetwork_mode: \nhost\n\nnetwork_mode: \nservice:[service_name]\n\nnetwork_mode: \ncontainer:[container name/id]\n\n\n\n\n\nVolumes\n\n\nUsage\n\n\n# rebuild your images\ndocker-compose build\n\n# build or rebuild services\ndocker-compose build [SERVICE...]\ndocker-compose build --no-cache database\n\n\n# start all the containers\ndocker-compose up -d\ndocker-compose up\n\n# stops the containers\ndocker-compose stop [CONTAINER]\n\n\n\n\nKeep a container running in compose \n2\n\n\nYou can use one of those lines\n\n\ncommand: \ntop\n\ncommand: \ntail -f /dev/null\n\ncommand: \nsleep infinity\n\n\n\n\n\n\n\n\n\n\n\n\n\nDocker Compose Files Version 2\n\n\n\n\n\n\ngithub issue, Keep a container running in compose", 
-            "title": "dockercompose"
-        }, 
-        {
-            "location": "/compose/#docker-compose-1", 
-            "text": "Compose a symphony   Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application\u2019s services. Then, using a single command, you create and start all the services from your configuration. To learn more about all the features of Compose see the list of features.\nDocker Compose  Describes the components of an application  Box your component  .component/\n\u251c\u2500\u2500 docker-compose.yml\n\u251c\u2500\u2500 app-1/\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 app/\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u251c\u2500\u2500 file-1\n\u2502\u00a0\u00a0 \u2502\u00a0\u00a0 \u2514\u2500\u2500 file-2\n\u2502\u00a0\u00a0 \u251c\u2500\u2500 Dockerfile\n\u2502\u00a0\u00a0 \u2514\u2500\u2500 run.sh\n\u2514\u2500\u2500 app-2/\n    \u251c\u2500\u2500 app/\n    \u2502\u00a0\u00a0 \u251c\u2500\u2500 file-1\n    \u2502\u00a0\u00a0 \u2514\u2500\u2500 file-2\n    \u251c\u2500\u2500 Dockerfile\n    \u2514\u2500\u2500 run.sh  Services  Networks  network_mode ,  ports ,  external_hosts ,  link ,  net  network_mode:  bridge \nnetwork_mode:  host \nnetwork_mode:  service:[service_name] \nnetwork_mode:  container:[container name/id]   Volumes  Usage  # rebuild your images\ndocker-compose build\n\n# build or rebuild services\ndocker-compose build [SERVICE...]\ndocker-compose build --no-cache database\n\n\n# start all the containers\ndocker-compose up -d\ndocker-compose up\n\n# stops the containers\ndocker-compose stop [CONTAINER]  Keep a container running in compose  2  You can use one of those lines  command:  top \ncommand:  tail -f /dev/null \ncommand:  sleep infinity       Docker Compose Files Version 2    github issue, Keep a container running in compose", 
-            "title": "Docker-Compose 1"
-        }, 
-        {
-            "location": "/swarm/", 
-            "text": "Docker Swarm\n\n\nDocker Swarm is native clustering for Docker. It turns a pool of Docker hosts into a single, virtual Docker host. Because Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts \n1\n\n\nArchitecture \n2\n\n\n\n\nSwarm Manager\n: Docker Swarm has a Master or Manager, that is a pre-defined Docker Host, and is a single point for all administration. Currently only a single instance of manager is allowed in the cluster. This is a SPOF for high availability architectures and additional managers will be allowed in a future version of Swarm with #598.\n\n\nSwarm Nodes\n: The containers are deployed on Nodes that are additional Docker Hosts. Each Swarm Node  must be accessible by the manager, each node must listen to the same network interface (TCP port). Each node runs a node agent that registers the referenced Docker daemon, monitors it, and updates the discovery backend with the node\u2019s status. The containers run on a node.\n\n\nScheduler Strategy\n: Different scheduler strategies (binpack, spread, and random) can be applied to pick the best node to run your container. The default strategy is spread which optimizes the node for least number of running containers. There are multiple kinds of filters, such as constraints and affinity.  This should allow for a decent scheduling algorithm.\n\n\nNode Discovery Service\n: By default, Swarm uses hosted discovery service, based on Docker Hub, using tokens to discover nodes that are part of a cluster. However etcd, consul, and zookeeper can be also be used for service discovery as well. This is particularly useful if there is no access to Internet, or you are running the setup in a closed network. A new discovery backend can be created as explained here. It would be useful to have the hosted Discovery Service inside the firewall and #660 will discuss this.\n\n\nStandard Docker API\n: Docker Swarm serves the standard Docker API and thus any tool that talks to a single Docker host will seamlessly scale to multiple hosts now. That means if you were using shell scripts using Docker CLI to configure multiple Docker hosts, the same CLI would can now talk to Swarm cluster and Docker Swarm will then act as proxy and run it on the cluster.\n\n\nCreate Swarm\n\n\n\n\nSimple Swarm\n\n\nSwarm with CentOS\n\n\nSwarm with Windows\n\n\n\n\nSwarm and Compose \n5\n\n\nCreate \ndocker-compose.yml\n file\n\n\nExample\n\n\nwget https://docs.docker.com/swarm/swarm_at_scale/docker-compose.yml\n\n\n\n\nDiscovery \n4\n\n\n\n\nScheduling \n3\n\n\nDocker Swarm: CentOS\n\n\nPrerequisites\n\n\n\n\nDocker 1.10.3\n\n\nCentOS 7\n\n\n\n\nCreate cluster \n1\n\n\nReceipts: \nconsult\n\n\nConfigure daemon\n in each host \n6\n\n\nEdit \n/etc/systemd/system/docker.service.d/docker.conf\n\n\n[Service]\nExecStart=\nExecStart=/usr/bin/docker daemon -H fd:// -D -H tcp://\nnode_ip\n:2375 --cluster-store=consul://\nconsul_ip\n:8500 --cluster-advertise=\nnode_ip\n:2375\n\n\n\n\nRestart docker\n\n\nsystemctl daemon-reload\nsystemctl restart docker\n\n\n\n\nVerify docker run with config\n\n\nps aux | grep docker | grep -v grep\n\n\n\n\nRun cluster\n\n\nIn \ndiscovery host\n\n\n# run consul\ndocker run -d -p 8500:8500 --name=consul progrium/consul -server -bootstrap\n\n\n\n\nIn \nswarm manage host\n\n\n# run swarm master\ndocker run -d -p 2376:2375 swarm manage consul://\nconsul_ip\n:8500/swarm\n\n\n\n\nIn \nswarm node host\n\n\n# open 2375 port\nfirewalld-cmd --get-active-zones\nfirewall-cmd --zone=public --add-port=2375/tcp --permanent\nfirewall-cmd --reload\n\n# run swarm node\ndocker run -d swarm join --addr=\nnode_ip\n:2375 consul://\nconsul_ip\n:8500/swarm\n\n\n\n\n\n\nQuestion: Why manager and consul cannot run in the same host? (because docker-proxy?)\n\n\n\n\nVerify\n \n2\n\n\n# manage\ndocker -H :2376 info\nexport DOCKER_HOST=tcp://\nip\n:12375\ndocker info\ndocker run -d -P redis\n\n# debug a swarm\ndocker swarm --debug manage consul://\nconsul_ip\n:8500\n\n\n\n\nDocker Swarm: Simple Swarm\n\n\nSimple Swarm in one node with \ntoken\n \n1\n\n\nChange file \nvi /etc/default/docker\n\n\nDOCKER_OPTS=\"-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock\"\n\n\n# Restart docker\nservice docker restart\n\n# create swarm token\ndocker run --rm swarm create\n\n token_id\n\n# Run swarm node\ndocker run -d swarm join --addr=ip:2375 token://token_id\ndocker ps\n\n# Run swarm manager\ndocker run -d -p 12375:2375 swarm manage token://token_id\n\n# Swarm info\ndocker -H :12375 info\n\nexport DOCKER_HOST=tcp://ip:12375\ndocker info\ndocker run -d -P redis\n\n\n\n\nDocker Swarm: Windows\n\n\nPrerequisites\n\n\n\n\nDocker 1.10.3\n\n\n\n\n\n\n\n\n\n\n\n\nGi\u1edbi thi\u1ec7u v\u00e0 ch\u1ea1y th\u1eed Docker Swarm\n\n\n\n\n\n\nDocker-swarm, Cannot connect to the docker engine endpoint\n\n\n\n\n\n\nDocker Swarm Part 3: Scheduling\n\n\n\n\n\n\nDocker Swarm Part 2: Discovery\n\n\n\n\n\n\nDeploy the application\n\n\n\n\n\n\nConfiguring and running Docker on various distributions", 
-            "title": "Swarm"
-        }, 
-        {
-            "location": "/swarm/#docker-swarm", 
-            "text": "Docker Swarm is native clustering for Docker. It turns a pool of Docker hosts into a single, virtual Docker host. Because Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts  1", 
-            "title": "Docker Swarm"
-        }, 
-        {
-            "location": "/swarm/#architecture-2", 
-            "text": "Swarm Manager : Docker Swarm has a Master or Manager, that is a pre-defined Docker Host, and is a single point for all administration. Currently only a single instance of manager is allowed in the cluster. This is a SPOF for high availability architectures and additional managers will be allowed in a future version of Swarm with #598.  Swarm Nodes : The containers are deployed on Nodes that are additional Docker Hosts. Each Swarm Node  must be accessible by the manager, each node must listen to the same network interface (TCP port). Each node runs a node agent that registers the referenced Docker daemon, monitors it, and updates the discovery backend with the node\u2019s status. The containers run on a node.  Scheduler Strategy : Different scheduler strategies (binpack, spread, and random) can be applied to pick the best node to run your container. The default strategy is spread which optimizes the node for least number of running containers. There are multiple kinds of filters, such as constraints and affinity.  This should allow for a decent scheduling algorithm.  Node Discovery Service : By default, Swarm uses hosted discovery service, based on Docker Hub, using tokens to discover nodes that are part of a cluster. However etcd, consul, and zookeeper can be also be used for service discovery as well. This is particularly useful if there is no access to Internet, or you are running the setup in a closed network. A new discovery backend can be created as explained here. It would be useful to have the hosted Discovery Service inside the firewall and #660 will discuss this.  Standard Docker API : Docker Swarm serves the standard Docker API and thus any tool that talks to a single Docker host will seamlessly scale to multiple hosts now. That means if you were using shell scripts using Docker CLI to configure multiple Docker hosts, the same CLI would can now talk to Swarm cluster and Docker Swarm will then act as proxy and run it on the cluster.", 
-            "title": "Architecture 2"
-        }, 
-        {
-            "location": "/swarm/#create-swarm", 
-            "text": "Simple Swarm  Swarm with CentOS  Swarm with Windows", 
-            "title": "Create Swarm"
-        }, 
-        {
-            "location": "/swarm/#swarm-and-compose-5", 
-            "text": "Create  docker-compose.yml  file  Example  wget https://docs.docker.com/swarm/swarm_at_scale/docker-compose.yml", 
-            "title": "Swarm and Compose 5"
-        }, 
-        {
-            "location": "/swarm/#discovery-4", 
-            "text": "", 
-            "title": "Discovery 4"
-        }, 
-        {
-            "location": "/swarm/#scheduling-3", 
-            "text": "", 
-            "title": "Scheduling 3"
-        }, 
-        {
-            "location": "/swarm/#docker-swarm-centos", 
-            "text": "", 
-            "title": "Docker Swarm: CentOS"
-        }, 
-        {
-            "location": "/swarm/#prerequisites", 
-            "text": "Docker 1.10.3  CentOS 7", 
-            "title": "Prerequisites"
-        }, 
-        {
-            "location": "/swarm/#create-cluster-1", 
-            "text": "Receipts:  consult  Configure daemon  in each host  6  Edit  /etc/systemd/system/docker.service.d/docker.conf  [Service]\nExecStart=\nExecStart=/usr/bin/docker daemon -H fd:// -D -H tcp:// node_ip :2375 --cluster-store=consul:// consul_ip :8500 --cluster-advertise= node_ip :2375  Restart docker  systemctl daemon-reload\nsystemctl restart docker  Verify docker run with config  ps aux | grep docker | grep -v grep  Run cluster  In  discovery host  # run consul\ndocker run -d -p 8500:8500 --name=consul progrium/consul -server -bootstrap  In  swarm manage host  # run swarm master\ndocker run -d -p 2376:2375 swarm manage consul:// consul_ip :8500/swarm  In  swarm node host  # open 2375 port\nfirewalld-cmd --get-active-zones\nfirewall-cmd --zone=public --add-port=2375/tcp --permanent\nfirewall-cmd --reload\n\n# run swarm node\ndocker run -d swarm join --addr= node_ip :2375 consul:// consul_ip :8500/swarm   Question: Why manager and consul cannot run in the same host? (because docker-proxy?)   Verify   2  # manage\ndocker -H :2376 info\nexport DOCKER_HOST=tcp:// ip :12375\ndocker info\ndocker run -d -P redis\n\n# debug a swarm\ndocker swarm --debug manage consul:// consul_ip :8500", 
-            "title": "Create cluster 1"
-        }, 
-        {
-            "location": "/swarm/#docker-swarm-simple-swarm", 
-            "text": "", 
-            "title": "Docker Swarm: Simple Swarm"
-        }, 
-        {
-            "location": "/swarm/#simple-swarm-in-one-node-with-token-1", 
-            "text": "Change file  vi /etc/default/docker  DOCKER_OPTS=\"-H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock\"  # Restart docker\nservice docker restart\n\n# create swarm token\ndocker run --rm swarm create  token_id\n\n# Run swarm node\ndocker run -d swarm join --addr=ip:2375 token://token_id\ndocker ps\n\n# Run swarm manager\ndocker run -d -p 12375:2375 swarm manage token://token_id\n\n# Swarm info\ndocker -H :12375 info\n\nexport DOCKER_HOST=tcp://ip:12375\ndocker info\ndocker run -d -P redis", 
-            "title": "Simple Swarm in one node with token 1"
-        }, 
-        {
-            "location": "/swarm/#docker-swarm-windows", 
-            "text": "", 
-            "title": "Docker Swarm: Windows"
-        }, 
-        {
-            "location": "/swarm/#prerequisites_1", 
-            "text": "Docker 1.10.3       Gi\u1edbi thi\u1ec7u v\u00e0 ch\u1ea1y th\u1eed Docker Swarm    Docker-swarm, Cannot connect to the docker engine endpoint    Docker Swarm Part 3: Scheduling    Docker Swarm Part 2: Discovery    Deploy the application    Configuring and running Docker on various distributions", 
-            "title": "Prerequisites"
-        }, 
-        {
-            "location": "/labs/", 
-            "text": "Docker Labs\n\n\nLab 1\n:\n\n\n# 1. Create a container from an Ubuntu image and run a bash terminal\ndocker run -it ubuntu /bin/bash\n# 2.Inside the container install curl\napt-get install curl\n# 3. Exit the container terminal\nCtrl-P\n# 4. Run `docker ps -a` and take not of your container ID\n# 5. Save the container as a new image. For the repository name use \nyourname\n/curl. Tag the image as 1.0\n# 6. Run `docker images` and verify that you can see your new image\n\n\n\n\nLab 2\n: Run Ubntu\n\n\nFROM ubuntu:14.04\nRUN apt-get update \n apt-get install -y curl \\ vim\n\n\n\n\n# 1. Go into the test folder and open your Dockerfile from the previous exercise\n\n# 2. Add the folloing line to the end\nCMD [\nping\n, \n127.0.0.1\n, \n-c\n, \n30\n]\n\n# 3. Build the image\ndocker build -t \nyourname\n/testimage:1.1 .\n\n# 4. Execute a container from the image and observe the output\ndocker run \nyourname\n/testimage:1.1\n\n# 5. Execute another container from the image and specify the echo command\ndocker run \nyourname\n/testimage:1.1 echo \nhello world\n\n\n# 6. Observe how the container argument overrides the CMD instruction\n\n\n\n\nLab:\n\n\n1) In your home directory, create a folder called test\n2) In the test folder, create a file called `Dockerfile`\n3) In the file, specify to use Ubuntu 14.04 as the base image\nFROM ubuntu:14.04\n4) Write an instruction to install curl and vim after an apt-get update\nRUN apt-get update \n apt-get install -y curl \\ vim\n5) Build an image from Dockerfile. Give it the repository \nyourname\n/testimage and tag it as 1.0\ndocker build -t johnnytu/testimage:1.0 .\n6) Create a container using your newly build image and verify that curl and vim are installed.\n\n\n\n\nLab:\n Run a container and get Terminal Access\n\n\n* Create a container using the ubuntu image and connect to STDIN and a terminal\ndocker run -i -t ubuntu /bin/bash\n* In your container, create a new user using your first and last name as the\nusername\naddusername username\n* Exit the container\nexit\n* Notice how the container shutdown\n* Once again run:\ndocker run -i -t ubuntu /bin/bash\n* Try and find your user `cat /etc/passwd`\n* Noice that it does not exist.\n\n\n\n\nLab:\n Run a web application inside a container\n\n\n# The -P flag to map container ports to host ports\ndocker run -d -P tomcat:7\ndocker ps     # check your image details runing\ngo to \nserver url\n:\nport number\n # verify that you can see the Tomcat page\n\n\n\n\nLab\n Create a Docker Hub Account\n\n\nLab\n Push Images to Docker Hub\n\n\n# Login to docker hub\n$ docker login --username=yourhubusername --email=youremail@company.com\nPassword:\nWARNING: login credentials saved in C:\\Users\\sven\\.docker\\config.json\nLogin Succeeded\n\n# Use `docker push` command\ndocker push [repo:tag]\n\n# Local repo must have same name and tag as the Docker Hub repo\n\n# Used  to rename a local image repository before pushing to Docker Hub\ndocker tag [image ID] [repo:tag]\ndocker tag [local repo:tag] [Docker Hub repo:tag]\n\n\n tag image with ID (trainingteam/testexample is the name of repository on Docker hub)\ndocker tag edfc212de17b trainingteam/testexample:1.0\n\n\n tag image using the local repository tag\ndocker tag johnnytu/testimage:1.5 trainingteam/testexample", 
-            "title": "Labs"
-        }, 
-        {
-            "location": "/labs/#docker-labs", 
-            "text": "Lab 1 :  # 1. Create a container from an Ubuntu image and run a bash terminal\ndocker run -it ubuntu /bin/bash\n# 2.Inside the container install curl\napt-get install curl\n# 3. Exit the container terminal\nCtrl-P\n# 4. Run `docker ps -a` and take not of your container ID\n# 5. Save the container as a new image. For the repository name use  yourname /curl. Tag the image as 1.0\n# 6. Run `docker images` and verify that you can see your new image  Lab 2 : Run Ubntu  FROM ubuntu:14.04\nRUN apt-get update   apt-get install -y curl \\ vim  # 1. Go into the test folder and open your Dockerfile from the previous exercise\n\n# 2. Add the folloing line to the end\nCMD [ ping ,  127.0.0.1 ,  -c ,  30 ]\n\n# 3. Build the image\ndocker build -t  yourname /testimage:1.1 .\n\n# 4. Execute a container from the image and observe the output\ndocker run  yourname /testimage:1.1\n\n# 5. Execute another container from the image and specify the echo command\ndocker run  yourname /testimage:1.1 echo  hello world \n\n# 6. Observe how the container argument overrides the CMD instruction  Lab:  1) In your home directory, create a folder called test\n2) In the test folder, create a file called `Dockerfile`\n3) In the file, specify to use Ubuntu 14.04 as the base image\nFROM ubuntu:14.04\n4) Write an instruction to install curl and vim after an apt-get update\nRUN apt-get update   apt-get install -y curl \\ vim\n5) Build an image from Dockerfile. Give it the repository  yourname /testimage and tag it as 1.0\ndocker build -t johnnytu/testimage:1.0 .\n6) Create a container using your newly build image and verify that curl and vim are installed.  Lab:  Run a container and get Terminal Access  * Create a container using the ubuntu image and connect to STDIN and a terminal\ndocker run -i -t ubuntu /bin/bash\n* In your container, create a new user using your first and last name as the\nusername\naddusername username\n* Exit the container\nexit\n* Notice how the container shutdown\n* Once again run:\ndocker run -i -t ubuntu /bin/bash\n* Try and find your user `cat /etc/passwd`\n* Noice that it does not exist.  Lab:  Run a web application inside a container  # The -P flag to map container ports to host ports\ndocker run -d -P tomcat:7\ndocker ps     # check your image details runing\ngo to  server url : port number  # verify that you can see the Tomcat page  Lab  Create a Docker Hub Account  Lab  Push Images to Docker Hub  # Login to docker hub\n$ docker login --username=yourhubusername --email=youremail@company.com\nPassword:\nWARNING: login credentials saved in C:\\Users\\sven\\.docker\\config.json\nLogin Succeeded\n\n# Use `docker push` command\ndocker push [repo:tag]\n\n# Local repo must have same name and tag as the Docker Hub repo\n\n# Used  to rename a local image repository before pushing to Docker Hub\ndocker tag [image ID] [repo:tag]\ndocker tag [local repo:tag] [Docker Hub repo:tag]  tag image with ID (trainingteam/testexample is the name of repository on Docker hub)\ndocker tag edfc212de17b trainingteam/testexample:1.0  tag image using the local repository tag\ndocker tag johnnytu/testimage:1.5 trainingteam/testexample", 
-            "title": "Docker Labs"
+            "location": "/#rule-of-thumb", 
+            "text": "Rule 1: Don't code in 2  dev  components at the same time. Do write tests instead.  Rule 2: Do pull  release  before switch code from a component to other.  Rule 3: Do include  release  version of other components in case reuse (component A include component B).  Rule 4: Don't  code  and  debug  in  release  branch, only  merge   or  pull  (from  dev )       http://git-scm.com/book/ca/v1/Git-Basics-Recording-Changes-to-the-Repository    https://www.atlassian.com/git/tutorials/using-branches/    http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely/2003515#2003515    https://guides.github.com/features/issues/    https://help.github.com/articles/using-pull-requests/    https://help.github.com/articles/about-github-wikis/    https://help.github.com/articles/about-repository-graphs/    Closing an issue in the same repository    Git Tools - Submodules    Git: how to get all the files changed and new files in a folder or zip?    git-scm.com: git-archive    Forking a Repo    Using pull request", 
+            "title": "Rule of thumb"
         }
     ]
 }

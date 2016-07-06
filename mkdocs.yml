@@ -1,12 +1,5 @@
 site_name: Docker
 pages:
 - "Home": 'index.md'
-- "Introduction": 'intro.md'
-- "Dev":
-  - "dev image": 'dev.md'
-  - "dockerfile": 'dockerfile.md'
-  - "dockercompose": 'compose.md'
-- "Swarm": 'swarm.md'
-- "Labs": 'labs.md'
 markdown_extensions:
     - footnotes
