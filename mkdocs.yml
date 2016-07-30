@@ -3,3 +3,4 @@ pages:
 - "Home": 'index.md'
 markdown_extensions:
     - footnotes
+google_analytics: ['UA-68978617-1', 'magizbox.com']
