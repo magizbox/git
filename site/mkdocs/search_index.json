@@ -2,57 +2,107 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.\n\n\n\n\nFile Status Lifecycle and Commits\n\n\n1\n\n\n\n\n# Add file contents to the index\ngit add [filename]\n# Record changes to the repository\ngit commit -m [message]\n# Reset current HEAD to the specified state\ngit reset HEAD~1\n# Switch branches or restore working tree files\ngit checkout HEAD~2\n\n\n\n\nView Status\n\n\ngit status\ngit log\ngit log --since=2015-12-01\ngit log --until=2015-12-01\ngit log --author=\nmagizbox\n\ngit log --grep=\nInit\n\ngit log --oneline origin/master\n\n\n\n\nBranches\n\n\n2\n\n\ncheck in\u00a0early, check in often\n what is `master`?\n\n\n\nA \nbranch\n represents an independent line of development. Branches serve as an abstraction for the \nedit \n stage \n commit\n process discussed in Git Basics, the first module of this series. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.\n\n\ngit branches diagram\n\n\n\n\n\n\nLocal Branches\n\n\n# view branches\ngit branch\n# create new branch\ngit checkout -b [branchname]\n# switch to a branch\ngit checkout [branchname]\n# delete branch\ngit branch -D [branchname]\n\n\n\n\nMerge\u00a0Branches\n\n\ngit merge [branchname]\n\n\n\n\nRemote Branches\n\n\n3\n\n\n# delete remote branches\ngit push origin --delete [branchname]\n\n\n\n\nRepositories\n\n\n\n\n  what is \norigin\n?\n\n\n\n\n# view remote branches\ngit remote -v\n# add remote branches\ngit remote add [repositoryname] [branch_url]\n# clone a repository into a new directory\ngit clone\n# push to repository\ngit push [repositoryname] [branchname]\ngit pull\n\n\n\n\nGit Configurations\n\n\nKnown Issues\n\n\n\n\nHow do I force git to use LF instead of CR+LF under windows?\n\n\n\n\ngit config --global core.autocrlf false\n\n\n\n\nPower Tools with Github\n\n\n\n \nIssues \n Milestones\n \n4\n\n\nIssues are a great way to keep track of tasks, enhancements, and bugs for your projects. They\u2019re kind of like email\u2014except they can be shared and discussed with the rest of your team. Most software projects have a bug tracker of some kind. GitHub\u2019s tracker is called \nIssues\n, and has its own section in every repository.\n\n\n\n\nCode\n\n\n8\n\n\n# commit to fix issue\ngit commit -m \nfix #34\n\n\n\n\n\nOnce you\u2019ve collected a lot of issues, you may find it hard to find the ones you care about. \nMilestones\n, labels, and assignees are great features to filter and categorize issues. A \nmilestone\n acts like a container for issues. This is useful for associating issues with specific features or project phases\n\n\n\n \n\u00a0\n5\n \n\n\nPull requests\n let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.\n\n\n\n\n\n\u00a0\nWiki \n6\n \n\n\n\n\nJust as writing good code and great tests are important, excellent documentation helps others use and extend your project.\n\nEvery GitHub repository comes equipped with a section for hosting documentation, called a \nwiki\n.\n\n\n\n \n\n\n Repository Graphs \n7\n\n\nEvery repository has \ngraphs\n that display data about traffic, contributors, and commits.\n\n\n\n\n\nInterview\n\n\n\n\n10 Years of Git: An Interview with Git Creator Linus Torvalds\n\n\n\n\n\nLearn Git\n\n\n\n\n\nOfficial Git Tutorial\n\n\nGit Beginner's Guide for Dummies\n\n\n\n\n\nGit Submodule\n\n\n9\n\n\nAdd new submodule\n\n\ngit submodule add https://github.com/chaconinc/DbConnector\n\n\n\n\nUpdate submodule\n\n\ngit submodule init\ngit submodule update\n\n\n\n\nTips\n\n\n10\n \n11\n\n\n# Create an archive of files from a named tree\ngit archive --format=zip HEAD \n app.zip\n\n\n\n\nDev \n Release with Git\n\n\n\n\nFork\n \n create a \nPull Request\n with Github\n\n\n12\n \n13\n\n\n\n\nIn a reposiroty you want to fork, click \nFork\n button. It will create your own repository\n\n\nRun this:\n\n\n\n\ngit remote add origin [your_repository] # that have created when you fork\ngit remote add upstream [original_repository] # the repository that you have fork\n\n\n\n\n\n\nCode in your own repository \n commit\n\n\nGo to your Fork repository\n\n\nSwitch to your branch\n\n\nCreate Pull Request\n to send a merge request to the owner of the original repository\n\n\n\n\nDescription\n\n\n\n\nDevelopment Branch\n\n\nIt use for debugging, coding, testing\n\n\nIt must have \ncode\n and \ntests\n\n\nRelease Branch\n\n\nIt use for running, including\n\n\nIt must have \ndocuments\n (\nAPI.md\n, \nHOW_TO_INSTALL.md\n, \nHOW_TO_RUN.md\n) and \nresources\n (executable and resource files) in \nrelease\n folder.\n\n\nRelease Branch doesn't care about code. It only care about \nrelease\n folder.\n\n\n\n\nRule of thumb\n\n\n\n\nRule 1: Don't code in 2 \ndev\n components at the same time. Do write tests instead.\n\n\nRule 2: Do pull \nrelease\n before switch code from a component to other.\n\n\nRule 3: Do include \nrelease\n version of other components in case reuse (component A include component B).\n\n\nRule 4: Don't \ncode\n and \ndebug\n in \nrelease\n branch, only \nmerge\n  or \npull\n (from \ndev\n)\n\n\n\n\n\n\n\n\n\n\n\n\nhttp://git-scm.com/book/ca/v1/Git-Basics-Recording-Changes-to-the-Repository\n\n\n\n\n\n\nhttps://www.atlassian.com/git/tutorials/using-branches/\n\n\n\n\n\n\nhttp://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely/2003515#2003515\n\n\n\n\n\n\nhttps://guides.github.com/features/issues/\n\n\n\n\n\n\nhttps://help.github.com/articles/using-pull-requests/\n\n\n\n\n\n\nhttps://help.github.com/articles/about-github-wikis/\n\n\n\n\n\n\nhttps://help.github.com/articles/about-repository-graphs/\n\n\n\n\n\n\nClosing an issue in the same repository\n\n\n\n\n\n\nGit Tools - Submodules\n\n\n\n\n\n\nGit: how to get all the files changed and new files in a folder or zip?\n\n\n\n\n\n\ngit-scm.com: git-archive\n\n\n\n\n\n\nForking a Repo\n\n\n\n\n\n\nUsing pull request", 
+            "text": "What is Git?\n\n\n\n\nGit is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.\n\n\n\n\nBooks\n\n\n\n\n\n\n\n\nCourses\n\n\n\n\n\n\n\n\nVideos\n\n\n\n\n\n\n\n\nExternal Links\n\n\n\n\nhttps://git-scm.com/\n\n\nOfficial Git Tutorial\n\n\nRy\u2019s Git Tutorial", 
             "title": "Home"
         }, 
         {
-            "location": "/#file-status-lifecycle-and-commits", 
-            "text": "1   # Add file contents to the index\ngit add [filename]\n# Record changes to the repository\ngit commit -m [message]\n# Reset current HEAD to the specified state\ngit reset HEAD~1\n# Switch branches or restore working tree files\ngit checkout HEAD~2", 
-            "title": "File Status Lifecycle and Commits"
+            "location": "/#what-is-git", 
+            "text": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.", 
+            "title": "What is Git?"
         }, 
         {
-            "location": "/#view-status", 
-            "text": "git status\ngit log\ngit log --since=2015-12-01\ngit log --until=2015-12-01\ngit log --author= magizbox \ngit log --grep= Init \ngit log --oneline origin/master", 
+            "location": "/#books", 
+            "text": "", 
+            "title": "Books"
+        }, 
+        {
+            "location": "/#courses", 
+            "text": "", 
+            "title": "Courses"
+        }, 
+        {
+            "location": "/#videos", 
+            "text": "", 
+            "title": "Videos"
+        }, 
+        {
+            "location": "/#external-links", 
+            "text": "https://git-scm.com/  Official Git Tutorial  Ry\u2019s Git Tutorial", 
+            "title": "External Links"
+        }, 
+        {
+            "location": "/install/", 
+            "text": "Windows\n\n\nStep 1. Download the \nGit for Windows installer package\n.\n\n\nStep 2. When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation.\n\n\n\n\nStep 3.Open Git Bash.vbs from the Git folder of the Programs directory to open a command window.\n\n\n\n\nStep 4. Configure your username using the following command\n\n\n$ git config --global user.name \nyour_name\n\n\n\n\n\nStep 5. Configure your email address using the following command\n\n\n$ git config --global user.email \nyour_email\n\n\n\n\n\nLinux\n\n\nStep 1. Enter the following command to install Git:\n\n\n$ sudo apt-get install git\n\n\n\n\nStep 2. Verify the installation was successful by typing which git at the command line.\n\n\n$ which git\n/opt/local/bin/git\n\n\n\n\nStep 3. Configure your username using the following command.\n\n\n$ git config --global user.name \nEmma Paris\n\n\n\n\n\nStep 4. Configure your email address using the following command.\n\n\n$ git config --global user.email \neparis@atlassian.com", 
+            "title": "Installation"
+        }, 
+        {
+            "location": "/install/#windows", 
+            "text": "Step 1. Download the  Git for Windows installer package .  Step 2. When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation.   Step 3.Open Git Bash.vbs from the Git folder of the Programs directory to open a command window.   Step 4. Configure your username using the following command  $ git config --global user.name  your_name   Step 5. Configure your email address using the following command  $ git config --global user.email  your_email", 
+            "title": "Windows"
+        }, 
+        {
+            "location": "/install/#linux", 
+            "text": "Step 1. Enter the following command to install Git:  $ sudo apt-get install git  Step 2. Verify the installation was successful by typing which git at the command line.  $ which git\n/opt/local/bin/git  Step 3. Configure your username using the following command.  $ git config --global user.name  Emma Paris   Step 4. Configure your email address using the following command.  $ git config --global user.email  eparis@atlassian.com", 
+            "title": "Linux"
+        }, 
+        {
+            "location": "/commit/", 
+            "text": "Commit\n\n\n1\n\n\n\n\n# Add file contents to the index\ngit add [filename]\n# Record changes to the repository\ngit commit -m [message]\n# Reset current HEAD to the specified state\ngit reset HEAD~1\n# Switch branches or restore working tree files\ngit checkout HEAD~2\n\n\n\n\nView Status\n\n\ngit status\ngit log\ngit log --since=2015-12-01\ngit log --until=2015-12-01\ngit log --author=\nmagizbox\n\ngit log --grep=\nInit\n\ngit log --oneline origin/master\n\n\n\n\n\n\n\n\n\n\n\n\nhttp://git-scm.com/book/ca/v1/Git-Basics-Recording-Changes-to-the-Repository", 
+            "title": "Commit"
+        }, 
+        {
+            "location": "/commit/#commit", 
+            "text": "1   # Add file contents to the index\ngit add [filename]\n# Record changes to the repository\ngit commit -m [message]\n# Reset current HEAD to the specified state\ngit reset HEAD~1\n# Switch branches or restore working tree files\ngit checkout HEAD~2", 
+            "title": "Commit"
+        }, 
+        {
+            "location": "/commit/#view-status", 
+            "text": "git status\ngit log\ngit log --since=2015-12-01\ngit log --until=2015-12-01\ngit log --author= magizbox \ngit log --grep= Init \ngit log --oneline origin/master      http://git-scm.com/book/ca/v1/Git-Basics-Recording-Changes-to-the-Repository", 
             "title": "View Status"
         }, 
         {
-            "location": "/#branches", 
-            "text": "2  check in\u00a0early, check in often  what is `master`?  A  branch  represents an independent line of development. Branches serve as an abstraction for the  edit   stage   commit  process discussed in Git Basics, the first module of this series. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.  git branches diagram   Local Branches  # view branches\ngit branch\n# create new branch\ngit checkout -b [branchname]\n# switch to a branch\ngit checkout [branchname]\n# delete branch\ngit branch -D [branchname]  Merge\u00a0Branches  git merge [branchname]  Remote Branches  3  # delete remote branches\ngit push origin --delete [branchname]", 
+            "location": "/branch/", 
+            "text": "Branches\n\n\n1\n\n\ncheck in\ufffdearly, check in often\n what is `master`?\n\n\n\nA \nbranch\n represents an independent line of development. Branches serve as an abstraction for the \nedit \n stage \n commit\n process discussed in Git Basics, the first module of this series. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.\n\n\ngit branches diagram\n\n\n\n\n\n\nLocal Branches\n\n\n# view branches\ngit branch\n# create new branch\ngit checkout -b [branchname]\n# switch to a branch\ngit checkout [branchname]\n# delete branch\ngit branch -D [branchname]\n\n\n\n\nMerge\ufffdBranches\n\n\ngit merge [branchname]\n\n\n\n\nRemote Branches\n\n\n2\n\n\n# delete remote branches\ngit push origin --delete [branchname]\n\n\n\n\nRepositories\n\n\n\n\n  what is \norigin\n?\n\n\n\n\n# view remote branches\ngit remote -v\n# add remote branches\ngit remote add [repositoryname] [branch_url]\n# clone a repository into a new directory\ngit clone\n# push to repository\ngit push [repositoryname] [branchname]\ngit pull\n\n\n\n\nGit Configurations\n\n\nKnown Issues\n\n\n\n\nHow do I force git to use LF instead of CR+LF under windows?\n\n\n\n\ngit config --global core.autocrlf false\n\n\n\n\nPower Tools with Github\n\n\n\n \nIssues \n Milestones\n \n3\n\n\nIssues are a great way to keep track of tasks, enhancements, and bugs for your projects. They\ufffdre kind of like email\ufffdexcept they can be shared and discussed with the rest of your team. Most software projects have a bug tracker of some kind. GitHub\ufffds tracker is called \nIssues\n, and has its own section in every repository.\n\n\n\n\nCode\n\n\n7\n\n\n# commit to fix issue\ngit commit -m \nfix #34\n\n\n\n\n\nOnce you\ufffdve collected a lot of issues, you may find it hard to find the ones you care about. \nMilestones\n, labels, and assignees are great features to filter and categorize issues. A \nmilestone\n acts like a container for issues. This is useful for associating issues with specific features or project phases\n\n\n\n \n\ufffd\n4\n \n\n\nPull requests\n let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.\n\n\n\n\n\n\ufffd\nWiki \n5\n \n\n\n\n\nJust as writing good code and great tests are important, excellent documentation helps others use and extend your project.\n\nEvery GitHub repository comes equipped with a section for hosting documentation, called a \nwiki\n.\n\n\n\n \n\n\n Repository Graphs \n6\n\n\nEvery repository has \ngraphs\n that display data about traffic, contributors, and commits.\n\n\n\n\n\nInterview\n\n\n\n\n10 Years of Git: An Interview with Git Creator Linus Torvalds\n\n\n\n\n\nLearn Git\n\n\n\n\n\nOfficial Git Tutorial\n\n\nGit Beginner's Guide for Dummies\n\n\n\n\n\nGit Submodule\n\n\n8\n\n\nAdd new submodule\n\n\ngit submodule add https://github.com/chaconinc/DbConnector\n\n\n\n\nUpdate submodule\n\n\ngit submodule init\ngit submodule update\n\n\n\n\nTips\n\n\n9\n \n10\n\n\n# Create an archive of files from a named tree\ngit archive --format=zip HEAD \n app.zip\n\n\n\n\nDev \n Release with Git\n\n\n\n\nFork\n \n create a \nPull Request\n with Github\n\n\n11\n \n12\n\n\n\n\nIn a reposiroty you want to fork, click \nFork\n button. It will create your own repository\n\n\nRun this:\n\n\n\n\ngit remote add origin [your_repository] # that have created when you fork\ngit remote add upstream [original_repository] # the repository that you have fork\n\n\n\n\n\n\nCode in your own repository \n commit\n\n\nGo to your Fork repository\n\n\nSwitch to your branch\n\n\nCreate Pull Request\n to send a merge request to the owner of the original repository\n\n\n\n\nDescription\n\n\n\n\nDevelopment Branch\n\n\nIt use for debugging, coding, testing\n\n\nIt must have \ncode\n and \ntests\n\n\nRelease Branch\n\n\nIt use for running, including\n\n\nIt must have \ndocuments\n (\nAPI.md\n, \nHOW_TO_INSTALL.md\n, \nHOW_TO_RUN.md\n) and \nresources\n (executable and resource files) in \nrelease\n folder.\n\n\nRelease Branch doesn't care about code. It only care about \nrelease\n folder.\n\n\n\n\nRule of thumb\n\n\n\n\nRule 1: Don't code in 2 \ndev\n components at the same time. Do write tests instead.\n\n\nRule 2: Do pull \nrelease\n before switch code from a component to other.\n\n\nRule 3: Do include \nrelease\n version of other components in case reuse (component A include component B).\n\n\nRule 4: Don't \ncode\n and \ndebug\n in \nrelease\n branch, only \nmerge\n  or \npull\n (from \ndev\n)\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://www.atlassian.com/git/tutorials/using-branches/\n\n\n\n\n\n\nhttp://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely/2003515#2003515\n\n\n\n\n\n\nhttps://guides.github.com/features/issues/\n\n\n\n\n\n\nhttps://help.github.com/articles/using-pull-requests/\n\n\n\n\n\n\nhttps://help.github.com/articles/about-github-wikis/\n\n\n\n\n\n\nhttps://help.github.com/articles/about-repository-graphs/\n\n\n\n\n\n\nClosing an issue in the same repository\n\n\n\n\n\n\nGit Tools - Submodules\n\n\n\n\n\n\nGit: how to get all the files changed and new files in a folder or zip?\n\n\n\n\n\n\ngit-scm.com: git-archive\n\n\n\n\n\n\nForking a Repo\n\n\n\n\n\n\nUsing pull request", 
+            "title": "Branch"
+        }, 
+        {
+            "location": "/branch/#branches", 
+            "text": "1  check in\ufffdearly, check in often  what is `master`?  A  branch  represents an independent line of development. Branches serve as an abstraction for the  edit   stage   commit  process discussed in Git Basics, the first module of this series. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.  git branches diagram   Local Branches  # view branches\ngit branch\n# create new branch\ngit checkout -b [branchname]\n# switch to a branch\ngit checkout [branchname]\n# delete branch\ngit branch -D [branchname]  Merge\ufffdBranches  git merge [branchname]  Remote Branches  2  # delete remote branches\ngit push origin --delete [branchname]", 
             "title": "Branches"
         }, 
         {
-            "location": "/#git-configurations", 
+            "location": "/branch/#git-configurations", 
             "text": "Known Issues   How do I force git to use LF instead of CR+LF under windows?   git config --global core.autocrlf false", 
             "title": "Git Configurations"
         }, 
         {
-            "location": "/#git-submodule", 
-            "text": "9  Add new submodule  git submodule add https://github.com/chaconinc/DbConnector  Update submodule  git submodule init\ngit submodule update", 
+            "location": "/branch/#git-submodule", 
+            "text": "8  Add new submodule  git submodule add https://github.com/chaconinc/DbConnector  Update submodule  git submodule init\ngit submodule update", 
             "title": "Git Submodule"
         }, 
         {
-            "location": "/#tips", 
-            "text": "10   11  # Create an archive of files from a named tree\ngit archive --format=zip HEAD   app.zip", 
+            "location": "/branch/#tips", 
+            "text": "9   10  # Create an archive of files from a named tree\ngit archive --format=zip HEAD   app.zip", 
             "title": "Tips"
         }, 
         {
-            "location": "/#dev-release-with-git", 
+            "location": "/branch/#dev-release-with-git", 
             "text": "", 
             "title": "Dev &amp; Release with Git"
         }, 
         {
-            "location": "/#fork-create-a-pull-request-with-github", 
-            "text": "12   13   In a reposiroty you want to fork, click  Fork  button. It will create your own repository  Run this:   git remote add origin [your_repository] # that have created when you fork\ngit remote add upstream [original_repository] # the repository that you have fork   Code in your own repository   commit  Go to your Fork repository  Switch to your branch  Create Pull Request  to send a merge request to the owner of the original repository", 
+            "location": "/branch/#fork-create-a-pull-request-with-github", 
+            "text": "11   12   In a reposiroty you want to fork, click  Fork  button. It will create your own repository  Run this:   git remote add origin [your_repository] # that have created when you fork\ngit remote add upstream [original_repository] # the repository that you have fork   Code in your own repository   commit  Go to your Fork repository  Switch to your branch  Create Pull Request  to send a merge request to the owner of the original repository", 
             "title": "Fork &amp; create a Pull Request with Github"
         }, 
         {
-            "location": "/#description", 
+            "location": "/branch/#description", 
             "text": "Development Branch  It use for debugging, coding, testing  It must have  code  and  tests  Release Branch  It use for running, including  It must have  documents  ( API.md ,  HOW_TO_INSTALL.md ,  HOW_TO_RUN.md ) and  resources  (executable and resource files) in  release  folder.  Release Branch doesn't care about code. It only care about  release  folder.", 
             "title": "Description"
         }, 
         {
-            "location": "/#rule-of-thumb", 
-            "text": "Rule 1: Don't code in 2  dev  components at the same time. Do write tests instead.  Rule 2: Do pull  release  before switch code from a component to other.  Rule 3: Do include  release  version of other components in case reuse (component A include component B).  Rule 4: Don't  code  and  debug  in  release  branch, only  merge   or  pull  (from  dev )       http://git-scm.com/book/ca/v1/Git-Basics-Recording-Changes-to-the-Repository    https://www.atlassian.com/git/tutorials/using-branches/    http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely/2003515#2003515    https://guides.github.com/features/issues/    https://help.github.com/articles/using-pull-requests/    https://help.github.com/articles/about-github-wikis/    https://help.github.com/articles/about-repository-graphs/    Closing an issue in the same repository    Git Tools - Submodules    Git: how to get all the files changed and new files in a folder or zip?    git-scm.com: git-archive    Forking a Repo    Using pull request", 
+            "location": "/branch/#rule-of-thumb", 
+            "text": "Rule 1: Don't code in 2  dev  components at the same time. Do write tests instead.  Rule 2: Do pull  release  before switch code from a component to other.  Rule 3: Do include  release  version of other components in case reuse (component A include component B).  Rule 4: Don't  code  and  debug  in  release  branch, only  merge   or  pull  (from  dev )       https://www.atlassian.com/git/tutorials/using-branches/    http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely/2003515#2003515    https://guides.github.com/features/issues/    https://help.github.com/articles/using-pull-requests/    https://help.github.com/articles/about-github-wikis/    https://help.github.com/articles/about-repository-graphs/    Closing an issue in the same repository    Git Tools - Submodules    Git: how to get all the files changed and new files in a folder or zip?    git-scm.com: git-archive    Forking a Repo    Using pull request", 
             "title": "Rule of thumb"
         }
     ]

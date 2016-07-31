@@ -4,9 +4,33 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2016-07-30</lastmod>
+     <lastmod>2016-07-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
+    <url>
+     <loc>None/install/</loc>
+     <lastmod>2016-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>None/commit/</loc>
+     <lastmod>2016-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/branch/</loc>
+     <lastmod>2016-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
