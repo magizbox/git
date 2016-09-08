@@ -6,7 +6,10 @@ pages:
 - "Doc":
   - "Commit": "commit.md"
   - "Branch": "branch.md"
-
+  - "Tag": "tag.md"
+  - "Submodule": "submodule.md"
+  - "Config": "config.md"
+  - "Github": "github.md"
 markdown_extensions:
     - footnotes
 extra_css:

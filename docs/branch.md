@@ -1,9 +1,5 @@
 ### Branches
 
-[^2]
-
-<blockquote>&lt;check in�early, check in often&gt; what is `master`?</blockquote>
-
 A <strong>branch</strong> represents an independent line of development. Branches serve as an abstraction for the <em>edit &gt; stage &gt; commit</em> process discussed in Git Basics, the first module of this series. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
 
 <p style="text-align:center;">git branches diagram</p>
@@ -23,7 +19,7 @@ git checkout [branchname]
 git branch -D [branchname]
 ```
 
-<strong>Merge�Branches</strong>
+<strong>Merge Branches</strong>
 
 ```
 git merge [branchname]
@@ -56,83 +52,8 @@ git push [repositoryname] [branchname]
 git pull
 ```
 
-### Git Configurations
 
-Known Issues
 
-* [How do I force git to use LF instead of CR+LF under windows?](http://stackoverflow.com/questions/2517190/how-do-i-force-git-to-use-lf-instead-of-crlf-under-windows)
-
-```
-git config --global core.autocrlf false
-```
-
-<h3>Power Tools with Github</h3>
-
-<img class="alignnone" src="https://lh3.googleusercontent.com/jxrgdB4uS2wUn_C2X1W1n5wNtBVi4Yu4BokdjoKJmpMO=w42-h39-no" alt="" /> <strong>Issues &amp; Milestones</strong> [^4]
-<blockquote>Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. They�re kind of like email�except they can be shared and discussed with the rest of your team. Most software projects have a bug tracker of some kind. GitHub�s tracker is called <strong>Issues</strong>, and has its own section in every repository.</blockquote>
-
-<img class="alignnone" src="https://lh3.googleusercontent.com/bBxznG1WyiN5B7T8n4ytZUFQ7zWuFPPPF8rqHviyvDGl=w1017-h898-no" alt="" />
-
-<strong>Code</strong>
-
-[^8]
-
-```
-# commit to fix issue
-git commit -m "fix #34"
-```
-
-<blockquote>Once you�ve collected a lot of issues, you may find it hard to find the ones you care about. <strong>Milestones</strong>, labels, and assignees are great features to filter and categorize issues. A <strong>milestone</strong> acts like a container for issues. This is useful for associating issues with specific features or project phases</blockquote>
-
-<a href="https://github.com/scikit-learn/scikit-learn/milestones" target="_blank"><img class="alignnone" src="https://lh3.googleusercontent.com/sx5ZWGPoEIjQ2aCBIU-NOwWQq8KxFcVq0YOM6s9Hfq0z=w1003-h477-no" alt="" width="1003" height="477" /></a> <img class="alignnone" src="https://lh3.googleusercontent.com/i22KAkqUFmKYVryN0PVF5Dc-VkiA2nzYB6TenVi4GV79=w41-h39-no" alt="" />�[^5] </strong>
-
-<blockquote><strong>Pull requests</strong> let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.</blockquote>
-
-<a href="https://github.com/scikit-learn/scikit-learn/pulls" target="_blank"><img class="alignnone" src="https://lh3.googleusercontent.com/Gn9AvcPAjBYdis5SMw7aka8gicw319YAhZcCZ_oswp17=w389-h320-no" alt="" /></a>
-
-<img class="alignnone" src="https://lh3.googleusercontent.com/O1h3xeXbV7tLQ3SWTgAS4LFJqEk-N52eN66bF_eZ2ceA=w40-h37-no" alt="" width="40" height="37" />�<strong>Wiki [^6] </strong>
-
-<blockquote>
-<div class="intro">Just as writing good code and great tests are important, excellent documentation helps others use and extend your project.</div>
-Every GitHub repository comes equipped with a section for hosting documentation, called a <strong><em>wiki</em></strong>.</blockquote>
-
-<a href="https://github.com/scikit-learn/scikit-learn/wiki" target="_blank"> <img class="alignnone" src="https://lh3.googleusercontent.com/bf_-VugPSCmBAf-BHf7xXZ4-dWZ86RK5vusvjkdtmIvu=w391-h320-no" alt="" width="391" height="320" /></a>
-
-<strong><img class="alignnone" src="https://lh3.googleusercontent.com/1HOQm2TEJl0LmJQdFVYkVQ9P6cK_j7JYfP89AjZfBTIz=w41-h38-no" alt="" /> Repository Graphs [^7]</sup></strong>
-
-<blockquote>Every repository has <strong>graphs</strong> that display data about traffic, contributors, and commits.</blockquote>
-
-<a href="https://github.com/scikit-learn/scikit-learn/graphs/contributors" target="_blank"><img class="alignnone" src="https://lh3.googleusercontent.com/qv_jzfMOA6RTgjrYxK6dS7Di9pA9mh2OpKVEV3gSnsOC=w1003-h742-no" alt="" width="1003" height="742" /></a>
-
-<strong>Interview</strong>
-
-<ul>
-<li><a href="http://www.linux.com/news/featured-blogs/185-jennifer-cloer/821541-10-years-of-git-an-interview-with-git-creator-linus-torvalds">10 Years of Git: An Interview with Git Creator Linus Torvalds</a></li>
-</ul>
-
-<h2>Learn Git</h2>
-
-<ul>
-<li><a href="http://git-scm.com/docs/gittutorial">Official Git Tutorial</a></li>
-<li><a href="https://backlogtool.com/git-guide/en/">Git Beginner's Guide for Dummies</a></li>
-</ul>
-
-## Git Submodule
-
-[^9]
-
-Add new submodule
-
-```bash
-git submodule add https://github.com/chaconinc/DbConnector
-```
-
-Update submodule
-
-```bash
-git submodule init
-git submodule update
-```
 
 ## Tips
 

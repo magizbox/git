@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Installation - Git</title>
+	<title>Github - Git</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -72,13 +72,13 @@
                 
                 
                 
-                    <li class="active">
-                        <a href="./">Installation</a>
+                    <li >
+                        <a href="../install/">Installation</a>
                     </li>
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Doc <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -113,8 +113,8 @@
 
                         
                             
-<li >
-    <a href="../github/">Github</a>
+<li class="active">
+    <a href="./">Github</a>
 </li>
 
                         
@@ -133,12 +133,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="..">
+                        <a rel="next" href="../config/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="prev" href="../commit/">
+                    <li class="disabled">
+                        <a rel="prev" >
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -154,47 +154,50 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#windows">Windows</a></li>
+        <li class="main active"><a href="#power-tools-with-github">Power Tools with Github</a></li>
         
-    
-        <li class="main "><a href="#linux">Linux</a></li>
+            <li><a href="#issues"> Issues</a></li>
+        
+            <li><a href="#milestones">Milestones</a></li>
+        
+            <li><a href="#pull-requests">Pull Requests</a></li>
+        
+            <li><a href="#wiki">Wiki</a></li>
+        
+            <li><a href="#repository-graphs">Repository Graphs</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="windows">Windows</h2>
-<p>Step 1. Download the <a href="https://git-scm.com/download/win">Git for Windows installer package</a>.</p>
-<p>Step 2. When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation.</p>
-<p><img alt="" src="https://confluence.atlassian.com/bitbucket/files/304578655/746520778/3/1435007596027/msysgit_wizF.png" /></p>
-<p>Step 3.Open Git Bash.vbs from the Git folder of the Programs directory to open a command window.</p>
-<p><img alt="" src="https://confluence.atlassian.com/bitbucket/files/304578655/746520792/1/1432736820172/git_bash_win.png" /></p>
-<p>Step 4. Configure your username using the following command</p>
-<pre><code>$ git config --global user.name &quot;your_name&quot;
+<h2 id="power-tools-with-github">Power Tools with Github</h2>
+<h3 id="issues"><img class="alignnone" src="https://lh3.googleusercontent.com/jxrgdB4uS2wUn_C2X1W1n5wNtBVi4Yu4BokdjoKJmpMO=w42-h39-no" alt="" /> Issues</h3>
+<blockquote>
+<p>Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. They re kind of like email except they can be shared and discussed with the rest of your team. Most software projects have a bug tracker of some kind. GitHub's tracker is called <strong>Issues</strong>, and has its own section in every repository.</p>
+</blockquote>
+<p><img class="alignnone" src="https://lh3.googleusercontent.com/bBxznG1WyiN5B7T8n4ytZUFQ7zWuFPPPF8rqHviyvDGl=w1017-h898-no" alt="" /></p>
+<p>Commit to fix issue</p>
+<pre><code>git commit -m &quot;fix #34&quot;
 </code></pre>
 
-<p>Step 5. Configure your email address using the following command</p>
-<pre><code>$ git config --global user.email &quot;your_email&quot;
-</code></pre>
+<h3 id="milestones">Milestones</h3>
+<p>Once you've collected a lot of issues, you may find it hard to find the ones you care about. <strong>Milestones</strong>, labels, and assignees are great features to filter and categorize issues. A <strong>milestone</strong> acts like a container for issues. This is useful for associating issues with specific features or project phases</p>
+<p><a href="https://github.com/scikit-learn/scikit-learn/milestones" target="_blank"><img class="alignnone" src="https://lh3.googleusercontent.com/sx5ZWGPoEIjQ2aCBIU-NOwWQq8KxFcVq0YOM6s9Hfq0z=w1003-h477-no" alt="" width="1003" height="477" /></a> <img class="alignnone" src="https://lh3.googleusercontent.com/i22KAkqUFmKYVryN0PVF5Dc-VkiA2nzYB6TenVi4GV79=w41-h39-no" alt="" />�[^5] </strong></p>
+<h3 id="pull-requests">Pull Requests</h3>
+<p>Pull requests let you tell others about changes you've pushed to a repository on GitHub. Once a pull request is sent, interested parties can review the set of changes, discuss potential modifications, and even push follow-up commits if necessary.</p>
+<p><a href="https://github.com/scikit-learn/scikit-learn/pulls" target="_blank"><img class="alignnone" src="https://lh3.googleusercontent.com/Gn9AvcPAjBYdis5SMw7aka8gicw319YAhZcCZ_oswp17=w389-h320-no" alt="" /></a></p>
+<p><img class="alignnone" src="https://lh3.googleusercontent.com/O1h3xeXbV7tLQ3SWTgAS4LFJqEk-N52eN66bF_eZ2ceA=w40-h37-no" alt="" width="40" height="37" /></p>
+<h3 id="wiki">Wiki</h3>
+<div class="intro">Just as writing good code and great tests are important, excellent documentation helps others use and extend your project.</div>
 
-<h2 id="linux">Linux</h2>
-<p>Step 1. Enter the following command to install Git:</p>
-<pre><code>$ sudo apt-get install git
-</code></pre>
+<p>Every GitHub repository comes equipped with a section for hosting documentation, called a <strong><em>wiki</em></strong>.</blockquote></p>
+<p><a href="https://github.com/scikit-learn/scikit-learn/wiki" target="_blank"> <img class="alignnone" src="https://lh3.googleusercontent.com/bf_-VugPSCmBAf-BHf7xXZ4-dWZ86RK5vusvjkdtmIvu=w391-h320-no" alt="" width="391" height="320" /></a></p>
+<p><strong><img class="alignnone" src="https://lh3.googleusercontent.com/1HOQm2TEJl0LmJQdFVYkVQ9P6cK_j7JYfP89AjZfBTIz=w41-h38-no" alt="" /></p>
+<h3 id="repository-graphs">Repository Graphs</h3>
+<blockquote>Every repository has <strong>graphs</strong> that display data about traffic, contributors, and commits.</blockquote>
 
-<p>Step 2. Verify the installation was successful by typing which git at the command line.</p>
-<pre><code>$ which git
-/opt/local/bin/git
-</code></pre>
-
-<p>Step 3. Configure your username using the following command.</p>
-<pre><code>$ git config --global user.name &quot;Emma Paris&quot;
-</code></pre>
-
-<p>Step 4. Configure your email address using the following command.</p>
-<pre><code>$ git config --global user.email &quot;eparis@atlassian.com&quot;
-</code></pre></div>
+<p><a href="https://github.com/scikit-learn/scikit-learn/graphs/contributors" target="_blank"><img class="alignnone" src="https://lh3.googleusercontent.com/qv_jzfMOA6RTgjrYxK6dS7Di9pA9mh2OpKVEV3gSnsOC=w1003-h742-no" alt="" width="1003" height="742" /></a></p></div>
             
         </div>
 

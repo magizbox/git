@@ -7,17 +7,17 @@
         
         
         
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Git</title>
+	<title>Config - Git</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="./css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./css/book.css" rel="stylesheet">
-        <link href="./css/course.css" rel="stylesheet">
-        <link href="./css/video.css" rel="stylesheet">
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/book.css" rel="stylesheet">
+        <link href="../css/course.css" rel="stylesheet">
+        <link href="../css/video.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -38,7 +38,7 @@
         
     </head>
 
-    <body class="homepage">
+    <body>
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -56,7 +56,7 @@
             
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">Git</a>
+            <a class="navbar-brand" href="..">Git</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -66,55 +66,55 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="active">
-                        <a href=".">Home</a>
+                    <li >
+                        <a href="..">Home</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="install/">Installation</a>
+                        <a href="../install/">Installation</a>
                     </li>
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Doc <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
                             
 <li >
-    <a href="commit/">Commit</a>
+    <a href="../commit/">Commit</a>
 </li>
 
                         
                             
 <li >
-    <a href="branch/">Branch</a>
+    <a href="../branch/">Branch</a>
 </li>
 
                         
                             
 <li >
-    <a href="tag/">Tag</a>
+    <a href="../tag/">Tag</a>
 </li>
 
                         
                             
 <li >
-    <a href="submodule/">Submodule</a>
+    <a href="../submodule/">Submodule</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Config</a>
 </li>
 
                         
                             
 <li >
-    <a href="config/">Config</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="github/">Github</a>
+    <a href="../github/">Github</a>
 </li>
 
                         
@@ -132,13 +132,13 @@
                     </a>
                 </li>
                 
-                    <li class="disabled">
-                        <a rel="next" >
+                    <li >
+                        <a rel="next" href="../submodule/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="install/">
+                        <a rel="prev" href="../github/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -154,50 +154,20 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#what-is-git">What is Git?</a></li>
-        
-    
-        <li class="main "><a href="#books">Books</a></li>
-        
-    
-        <li class="main "><a href="#courses">Courses</a></li>
-        
-    
-        <li class="main "><a href="#videos">Videos</a></li>
-        
-    
-        <li class="main "><a href="#external-links">External Links</a></li>
+        <li class="main active"><a href="#git-configurations">Git Configurations</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="what-is-git">What is Git?</h2>
-<blockquote>
-<p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
-</blockquote>
-<h2 id="books">Books</h2>
-<div class="books" gid="1YLYc6_MPFlhhJKrFhMjDgFojYmryknjWu3ddExlde8w"></div>
-
-<div class="clearfix"></div>
-
-<h2 id="courses">Courses</h2>
-<div class="courses" gid="1e6113mRo6NRNPqN7ZoDcVWiVLez3YFeFbq7xq6eSxvE"></div>
-
-<div class="clearfix"></div>
-
-<h2 id="videos">Videos</h2>
-<div class="videos" gid="1ElGyxh5dgNVJSVMxF3gNUtyAHd8j98XPx_pP8svdCs4"></div>
-
-<div class="clearfix"></div>
-
-<h2 id="external-links">External Links</h2>
+<h3 id="git-configurations">Git Configurations</h3>
+<p>Known Issues</p>
 <ul>
-<li><a href="https://git-scm.com/">https://git-scm.com/</a></li>
-<li><a href="https://git-scm.com/docs/gittutorial">Official Git Tutorial</a></li>
-<li><a href="http://rypress.com/tutorials/git/index">Ry’s Git Tutorial</a></li>
-</ul></div>
+<li><a href="http://stackoverflow.com/questions/2517190/how-do-i-force-git-to-use-lf-instead-of-crlf-under-windows">How do I force git to use LF instead of CR+LF under windows?</a></li>
+</ul>
+<pre><code>git config --global core.autocrlf false
+</code></pre></div>
             
         </div>
 
@@ -207,17 +177,17 @@
             <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
-        <script src="./js/underscore.js"></script>
-        <script src="./js/gspreadsheet.js"></script>
-        <script src="./js/book.js"></script>
-        <script src="./js/course.js"></script>
-        <script src="./js/video.js"></script>
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../js/underscore.js"></script>
+        <script src="../js/gspreadsheet.js"></script>
+        <script src="../js/book.js"></script>
+        <script src="../js/course.js"></script>
+        <script src="../js/video.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">
@@ -246,8 +216,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 0.15.3
-Build Date UTC : 2016-09-08 10:25:06.748000
--->
