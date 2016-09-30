@@ -10,6 +10,7 @@ pages:
   - "Submodule": "submodule.md"
   - "Config": "config.md"
   - "Github": "github.md"
+  - "Workflow": "team_workflow.md"
 markdown_extensions:
     - footnotes
 extra_css:

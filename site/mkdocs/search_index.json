@@ -204,6 +204,51 @@
             "location": "/github/#repository-graphs", 
             "text": "Every repository has  graphs  that display data about traffic, contributors, and commits.", 
             "title": "Repository Graphs"
+        }, 
+        {
+            "location": "/team_workflow/", 
+            "text": "Team Workflow\n\n\nIn this article, I will represent our workflow with git to collaboration. As you can see, there are \nupstream\n, \nA\n, \nB\n repositories. Upstream repostiroy is main repository of project, owner by team leader. \nA\n and \nB\n repositories belong to developers. In \nupstream\n remote, there are \nmaster\n and \ndev\n branches. In developer's repositories, there are \ndev\n and \nfeature-something\n branches.\n\n\n\n\nStep 1: Create new project\n\n\nIn step 1, leader create a repository.\n\n\n\n\nStep 2: Forking\n\n\nIn step 2, each developers create their own repository by forking main repository\n\n\n\n\nStep 3: Commits\n\n\nIn step 3, developers work on their brands, each peace of their works should be end be a \ncommit\n\n\n\n\nStep 4: Merge Requests\n\n\nAfter finish a feature, each developer will create a \nmerge requests\n to main repository. Leader take repository for merging their requests\n\n\n\n\nStep 5: fetch and rebase\n\n\nDeveloper will checkout to dev \nbranch\n, fetch from upstream remote and rebase\n\n\n\n\nStep 6: Develop new features\n\n\nTeam sync\n. So developer can \ncheckout\n from dev feature to create new feature.\n\n\n\n\nStep 7: New version\n\n\nLeader take repository to merge from dev branch to master branch and create tag to release new version.", 
+            "title": "Workflow"
+        }, 
+        {
+            "location": "/team_workflow/#team-workflow", 
+            "text": "In this article, I will represent our workflow with git to collaboration. As you can see, there are  upstream ,  A ,  B  repositories. Upstream repostiroy is main repository of project, owner by team leader.  A  and  B  repositories belong to developers. In  upstream  remote, there are  master  and  dev  branches. In developer's repositories, there are  dev  and  feature-something  branches.", 
+            "title": "Team Workflow"
+        }, 
+        {
+            "location": "/team_workflow/#step-1-create-new-project", 
+            "text": "In step 1, leader create a repository.", 
+            "title": "Step 1: Create new project"
+        }, 
+        {
+            "location": "/team_workflow/#step-2-forking", 
+            "text": "In step 2, each developers create their own repository by forking main repository", 
+            "title": "Step 2: Forking"
+        }, 
+        {
+            "location": "/team_workflow/#step-3-commits", 
+            "text": "In step 3, developers work on their brands, each peace of their works should be end be a  commit", 
+            "title": "Step 3: Commits"
+        }, 
+        {
+            "location": "/team_workflow/#step-4-merge-requests", 
+            "text": "After finish a feature, each developer will create a  merge requests  to main repository. Leader take repository for merging their requests", 
+            "title": "Step 4: Merge Requests"
+        }, 
+        {
+            "location": "/team_workflow/#step-5-fetch-and-rebase", 
+            "text": "Developer will checkout to dev  branch , fetch from upstream remote and rebase", 
+            "title": "Step 5: fetch and rebase"
+        }, 
+        {
+            "location": "/team_workflow/#step-6-develop-new-features", 
+            "text": "Team sync . So developer can  checkout  from dev feature to create new feature.", 
+            "title": "Step 6: Develop new features"
+        }, 
+        {
+            "location": "/team_workflow/#step-7-new-version", 
+            "text": "Leader take repository to merge from dev branch to master branch and create tag to release new version.", 
+            "title": "Step 7: New version"
         }
     ]
 }
