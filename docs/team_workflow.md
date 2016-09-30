@@ -18,13 +18,13 @@ In step 2, each developers create their own repository by forking main repositor
 
 ### Step 3: Commits
 
-In step 3, developers work on their brands, each peace of their works should be end be a `commit`
+In step 3, developers work on their branches, each peace of their works should be end by a `commit`
 
 ![resources/workflow-step-3.png](resources/workflow-step-3.png)
 
 ### Step 4: Merge Requests
 
-After finish a feature, each developer will create a `merge requests` to main repository. Leader take repository for merging their requests
+After finish a feature, each developer will create a `merge requests` to main repository. Leader take responsibility for merging their requests
 
 ![resources/workflow-step-4.png](resources/workflow-step-4.png)
 
@@ -36,13 +36,13 @@ Developer will checkout to dev `branch`, fetch from upstream remote and rebase
 
 ### Step 6: Develop new features
 
-**Team sync**. So developer can `checkout` from dev feature to create new feature.
+**Team sync**. At this moment, developer can `checkout` from dev feature to create new feature.
 
 ![resources/workflow-step-6.png](resources/workflow-step-6.png)
 
 ### Step 7: New version
 
-Leader take repository to merge from dev branch to master branch and create tag to release new version.
+Leader take responsibility to merge from dev branch to master branch and create tag to release new version.
 
 ![resources/workflow-step-7.png](resources/workflow-step-7.png)
 
