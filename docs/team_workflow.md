@@ -28,7 +28,7 @@ After finish a feature, each developer will create a `merge requests` to main re
 
 ![resources/workflow-step-4.png](resources/workflow-step-4.png)
 
-### Step 5: fetch and rebase
+### Step 5: Fetch and Rebase
 
 Developer will checkout to `develop` branch, fetch from upstream remote and rebase
 
