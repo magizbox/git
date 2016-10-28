@@ -177,12 +177,15 @@
             <li><a href="#step-7-new-version">Step 7: New version</a></li>
         
     
+        <li class="main "><a href="#related-readings">Related Readings</a></li>
+        
+    
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h2 id="team-workflow">Team Workflow</h2>
-<p>In this article, I will represent our workflow with git to collaboration. As you can see, there are <code>upstream</code>, <code>A</code>, <code>B</code> repositories. Upstream repostiroy is main repository of project, owner by team leader. <code>A</code> and <code>B</code> repositories belong to developers. In <code>upstream</code> remote, there are <code>master</code> and <code>dev</code> branches. In developer's repositories, there are <code>dev</code> and <code>feature-something</code> branches.</p>
+<p>In this article, I will represent our workflow with git to collaboration. As you can see, there are <code>upstream</code>, <code>A</code>, <code>B</code> repositories. Upstream repostiroy is main repository of project, owner by team leader. <code>A</code> and <code>B</code> repositories belong to developers. In <code>upstream</code> remote, there are <code>master</code> and <code>develop</code> branches. In developer's repositories, there are <code>develop</code> and <code>feature-something</code> branches.</p>
 <p><img alt="resources/workflow.png" src="../resources/workflow.png" /></p>
 <h3 id="step-1-create-new-project">Step 1: Create new project</h3>
 <p>In step 1, leader create a repository.</p>
@@ -197,14 +200,19 @@
 <p>After finish a feature, each developer will create a <code>merge requests</code> to main repository. Leader take responsibility for merging their requests</p>
 <p><img alt="resources/workflow-step-4.png" src="../resources/workflow-step-4.png" /></p>
 <h3 id="step-5-fetch-and-rebase">Step 5: fetch and rebase</h3>
-<p>Developer will checkout to dev <code>branch</code>, fetch from upstream remote and rebase</p>
+<p>Developer will checkout to <code>develop</code> branch, fetch from upstream remote and rebase</p>
 <p><img alt="resources/workflow-step-5.png" src="../resources/workflow-step-5.png" /></p>
 <h3 id="step-6-develop-new-features">Step 6: Develop new features</h3>
-<p><strong>Team sync</strong>. At this moment, developer can <code>checkout</code> from dev feature to create new feature.</p>
+<p><strong>Team sync</strong>. At this moment, developer can <code>checkout</code> from <code>develop</code> branch to create new feature.</p>
 <p><img alt="resources/workflow-step-6.png" src="../resources/workflow-step-6.png" /></p>
 <h3 id="step-7-new-version">Step 7: New version</h3>
 <p>Leader take responsibility to merge from dev branch to master branch and create tag to release new version.</p>
-<p><img alt="resources/workflow-step-7.png" src="../resources/workflow-step-7.png" /></p></div>
+<p><img alt="resources/workflow-step-7.png" src="../resources/workflow-step-7.png" /></p>
+<h2 id="related-readings">Related Readings</h2>
+<ul>
+<li><a href="http://stackoverflow.com/questions/15072243/git-with-development-staging-and-production-branches">"Git With Development, Staging And Production Branches". <em>stackoverflow.com</em>. N.p., 2016. Web. 28 Oct. 2016.</a></li>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">"A Successful Git Branching Model". <em>nvie.com</em>. N.p., 2016. Web. 28 Oct. 2016.</a></li>
+</ul></div>
             
         </div>
 

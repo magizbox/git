@@ -162,27 +162,22 @@
     
         <li class="main active"><a href="#branches">Branches</a></li>
         
-    
-        <li class="main "><a href="#tips">Tips</a></li>
+            <li><a href="#repositories">Repositories</a></li>
         
-    
-        <li class="main "><a href="#dev-release-with-git">Dev &amp; Release with Git</a></li>
+            <li><a href="#branch-naming-convention">Branch Naming Convention</a></li>
         
-            <li><a href="#fork-create-a-pull-request-with-github">Fork &amp; create a Pull Request with Github</a></li>
+            <li><a href="#create-an-archive">Create an archive</a></li>
         
-            <li><a href="#description">Description</a></li>
-        
-            <li><a href="#rule-of-thumb">Rule of thumb</a></li>
+            <li><a href="#fork-request">Fork &amp; Request</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h3 id="branches">Branches</h3>
+<h1 id="branches">Branches</h1>
 <p>A <strong>branch</strong> represents an independent line of development. Branches serve as an abstraction for the <em>edit &gt; stage &gt; commit</em> process discussed in Git Basics, the first module of this series. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.</p>
-<p style="text-align:center;">git branches diagram</p>
-
+<p><center><em>git branches diagram</em></center></p>
 <p style="text-align:center;"><img class="alignnone" src="http://backlogtool.com/git-guide/en/img/post/stepup/capture_stepup1_5_6.png" alt="" /></p>
 
 <p><strong>Local Branches</strong></p>
@@ -200,18 +195,15 @@ git branch -D [branchname]
 <pre><code>git merge [branchname]
 </code></pre>
 
-<p><strong>Remote Branches</strong></p>
-<p><sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">2</a></sup></p>
+<p><strong>Remote Branches</strong><sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">2</a></sup></p>
 <pre><code># delete remote branches
 git push origin --delete [branchname]
 </code></pre>
 
-<h3>Repositories</h3>
-
+<h2 id="repositories">Repositories</h2>
 <blockquote>
-  what is <code>origin</code>?
+<p>what is <code>origin</code>?</p>
 </blockquote>
-
 <pre><code># view remote branches
 git remote -v
 # add remote branches
@@ -223,18 +215,59 @@ git push [repositoryname] [branchname]
 git pull
 </code></pre>
 
-<h2 id="tips">Tips</h2>
+<h2 id="branch-naming-convention">Branch Naming Convention</h2>
+<ul>
+<li>Choose <em>short</em> and <em>descriptive</em> names:</li>
+</ul>
+<pre><code># good
+$ git checkout -b oauth-migration
+
+# bad - too vague
+$ git checkout -b login_fix
+</code></pre>
+
+<ul>
+<li>Identifiers from corresponding tickets in an external service (eg. a GitHub issue) are also good candidates for use in branch names. For example:</li>
+</ul>
+<pre><code># GitHub issue #15
+$ git checkout -b issue-15
+</code></pre>
+
+<ul>
+<li>
+<p>Use <em>dashes</em> to separate words.</p>
+</li>
+<li>
+<p>When several people are working on the same feature, it might be convenient to have personal feature branches and a team-wide feature branch. Use the following naming convention:</p>
+</li>
+</ul>
+<pre><code>$ git checkout -b feature-a/master # team-wide branch
+$ git checkout -b feature-a/maria  # Maria's personal branch
+$ git checkout -b feature-a/nick   # Nick's personal branch
+Merge at will the personal branches to the team-wide branch (see &quot;Merging&quot;). Eventually, the team-wide branch will be merged to &quot;master&quot;.
+</code></pre>
+
+<ul>
+<li>
+<p>Delete your branch from the upstream repository after it's merged, unless there is a specific reason not to.</p>
+</li>
+<li>
+<p>Tip: Use the following command while being on "master", to list merged branches:</p>
+</li>
+</ul>
+<pre><code>$ git branch --merged | grep -v &quot;\*&quot;
+</code></pre>
+
+<h2 id="create-an-archive">Create an archive</h2>
 <p><sup id="fnref:10"><a class="footnote-ref" href="#fn:10" rel="footnote">9</a></sup> <sup id="fnref:11"><a class="footnote-ref" href="#fn:11" rel="footnote">10</a></sup></p>
 <pre><code># Create an archive of files from a named tree
 git archive --format=zip HEAD &gt; app.zip
 </code></pre>
 
-<h2 id="dev-release-with-git">Dev &amp; Release with Git</h2>
-<p><img alt="" src="https://lh3.googleusercontent.com/b4wC83vaEZaGkwSLV4TVlh7T8a4PEV5UnAHjFJGyNWROHGiEVR4xQtUHTPUtOZeRyERUKcfNfSHbFg=w369-h501-no" /></p>
-<h3 id="fork-create-a-pull-request-with-github"><code>Fork</code> &amp; create a <code>Pull Request</code> with Github</h3>
+<h2 id="fork-request">Fork &amp; Request</h2>
 <p><sup id="fnref:12"><a class="footnote-ref" href="#fn:12" rel="footnote">11</a></sup> <sup id="fnref:13"><a class="footnote-ref" href="#fn:13" rel="footnote">12</a></sup></p>
 <ol>
-<li>In a reposiroty you want to fork, click <code>Fork</code> button. It will create your own repository</li>
+<li>In a repository you want to fork, click <code>Fork</code> button. It will create your own repository</li>
 <li>Run this:</li>
 </ol>
 <pre><code>git remote add origin [your_repository] # that have created when you fork
@@ -247,23 +280,6 @@ git remote add upstream [original_repository] # the repository that you have for
 <li>Switch to your branch</li>
 <li><code>Create Pull Request</code> to send a merge request to the owner of the original repository</li>
 </ol>
-<h3 id="description">Description</h3>
-<ul>
-<li><strong>Development Branch</strong></li>
-<li>It use for debugging, coding, testing</li>
-<li>It must have <code>code</code> and <code>tests</code></li>
-<li><strong>Release Branch</strong></li>
-<li>It use for running, including</li>
-<li>It must have <code>documents</code> (<code>API.md</code>, <code>HOW_TO_INSTALL.md</code>, <code>HOW_TO_RUN.md</code>) and <code>resources</code> (executable and resource files) in <code>release</code> folder.</li>
-<li>Release Branch doesn't care about code. It only care about <code>release</code> folder.</li>
-</ul>
-<h3 id="rule-of-thumb">Rule of thumb</h3>
-<ul>
-<li>Rule 1: Don't code in 2 <code>dev</code> components at the same time. Do write tests instead.</li>
-<li>Rule 2: Do pull <code>release</code> before switch code from a component to other.</li>
-<li>Rule 3: Do include <code>release</code> version of other components in case reuse (component A include component B).</li>
-<li>Rule 4: Don't <strong>code</strong> and <strong>debug</strong> in <code>release</code> branch, only <code>merge</code>  or <code>pull</code> (from <code>dev</code>)</li>
-</ul>
 <div class="footnote">
 <hr />
 <ol>

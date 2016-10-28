@@ -1,6 +1,6 @@
 ## Team Workflow
 
-In this article, I will represent our workflow with git to collaboration. As you can see, there are `upstream`, `A`, `B` repositories. Upstream repostiroy is main repository of project, owner by team leader. `A` and `B` repositories belong to developers. In `upstream` remote, there are `master` and `dev` branches. In developer's repositories, there are `dev` and `feature-something` branches.
+In this article, I will represent our workflow with git to collaboration. As you can see, there are `upstream`, `A`, `B` repositories. Upstream repostiroy is main repository of project, owner by team leader. `A` and `B` repositories belong to developers. In `upstream` remote, there are `master` and `develop` branches. In developer's repositories, there are `develop` and `feature-something` branches.
 
 ![resources/workflow.png](resources/workflow.png)
 
@@ -30,13 +30,13 @@ After finish a feature, each developer will create a `merge requests` to main re
 
 ### Step 5: fetch and rebase
 
-Developer will checkout to dev `branch`, fetch from upstream remote and rebase
+Developer will checkout to `develop` branch, fetch from upstream remote and rebase
 
 ![resources/workflow-step-5.png](resources/workflow-step-5.png)
 
 ### Step 6: Develop new features
 
-**Team sync**. At this moment, developer can `checkout` from dev feature to create new feature.
+**Team sync**. At this moment, developer can `checkout` from `develop` branch to create new feature.
 
 ![resources/workflow-step-6.png](resources/workflow-step-6.png)
 
@@ -46,5 +46,7 @@ Leader take responsibility to merge from dev branch to master branch and create 
 
 ![resources/workflow-step-7.png](resources/workflow-step-7.png)
 
+## Related Readings
 
-
+* ["Git With Development, Staging And Production Branches". *stackoverflow.com*. N.p., 2016. Web. 28 Oct. 2016.](http://stackoverflow.com/questions/15072243/git-with-development-staging-and-production-branches)
+* ["A Successful Git Branching Model". *nvie.com*. N.p., 2016. Web. 28 Oct. 2016.](http://nvie.com/posts/a-successful-git-branching-model/)

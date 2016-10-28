@@ -1,12 +1,12 @@
-### Branches
+# Branches
 
 A <strong>branch</strong> represents an independent line of development. Branches serve as an abstraction for the <em>edit &gt; stage &gt; commit</em> process discussed in Git Basics, the first module of this series. You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project.
 
-<p style="text-align:center;">git branches diagram</p>
+<center>*git branches diagram*</center>
 
 <p style="text-align:center;"><img class="alignnone" src="http://backlogtool.com/git-guide/en/img/post/stepup/capture_stepup1_5_6.png" alt="" /></p>
 
-<strong>Local Branches</strong>
+**Local Branches**
 
 ```
 # view branches
@@ -25,20 +25,16 @@ git branch -D [branchname]
 git merge [branchname]
 ```
 
-<strong>Remote Branches</strong>
-
-[^3]
+<strong>Remote Branches</strong>[^3]
 
 ```
 # delete remote branches
 git push origin --delete [branchname]
 ```
 
-<h3>Repositories</h3>
+## Repositories
 
-<blockquote>
-  what is <code>origin</code>?
-</blockquote>
+>  what is <code>origin</code>?
 
 ```
 # view remote branches
@@ -51,11 +47,47 @@ git clone
 git push [repositoryname] [branchname]
 git pull
 ```
+## Branch Naming Convention
 
 
+* Choose *short* and *descriptive* names:
+
+```
+# good
+$ git checkout -b oauth-migration
+
+# bad - too vague
+$ git checkout -b login_fix
+```
+
+* Identifiers from corresponding tickets in an external service (eg. a GitHub issue) are also good candidates for use in branch names. For example:
+
+```
+# GitHub issue #15
+$ git checkout -b issue-15
+```
+
+* Use *dashes* to separate words.
+
+* When several people are working on the same feature, it might be convenient to have personal feature branches and a team-wide feature branch. Use the following naming convention:
+
+```
+$ git checkout -b feature-a/master # team-wide branch
+$ git checkout -b feature-a/maria  # Maria's personal branch
+$ git checkout -b feature-a/nick   # Nick's personal branch
+Merge at will the personal branches to the team-wide branch (see "Merging"). Eventually, the team-wide branch will be merged to "master".
+```
+
+* Delete your branch from the upstream repository after it's merged, unless there is a specific reason not to.
+
+* Tip: Use the following command while being on "master", to list merged branches:
+
+```
+$ git branch --merged | grep -v "\*"
+```
 
 
-## Tips
+## Create an archive
 
 [^10] [^11]
 
@@ -64,15 +96,11 @@ git pull
 git archive --format=zip HEAD > app.zip
 ```
 
-## Dev & Release with Git
-
-![](https://lh3.googleusercontent.com/b4wC83vaEZaGkwSLV4TVlh7T8a4PEV5UnAHjFJGyNWROHGiEVR4xQtUHTPUtOZeRyERUKcfNfSHbFg=w369-h501-no)
-
-### `Fork` & create a `Pull Request` with Github
+## Fork & Request
 
 [^12] [^13]
 
-1. In a reposiroty you want to fork, click `Fork` button. It will create your own repository
+1. In a repository you want to fork, click `Fork` button. It will create your own repository
 2. Run this:
 
 ```
@@ -85,22 +113,6 @@ git remote add upstream [original_repository] # the repository that you have for
 5. Switch to your branch
 6. `Create Pull Request` to send a merge request to the owner of the original repository
 
-### Description
-
-* **Development Branch**
-  * It use for debugging, coding, testing
-  * It must have `code` and `tests`
-* **Release Branch**
-  * It use for running, including
-  * It must have `documents` (`API.md`, `HOW_TO_INSTALL.md`, `HOW_TO_RUN.md`) and `resources` (executable and resource files) in `release` folder.
-  * Release Branch doesn't care about code. It only care about `release` folder.
-
-### Rule of thumb
-
-* Rule 1: Don't code in 2 `dev` components at the same time. Do write tests instead.
-* Rule 2: Do pull `release` before switch code from a component to other.
-* Rule 3: Do include `release` version of other components in case reuse (component A include component B).
-* Rule 4: Don't **code** and **debug** in `release` branch, only `merge`  or `pull` (from `dev`)
 
 [^2]: <a href="https://www.atlassian.com/git/tutorials/using-branches/" target="_blank">https://www.atlassian.com/git/tutorials/using-branches/</a>
 [^3]: <a href="http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely/2003515#2003515" target="_blank">http://stackoverflow.com/questions/2003505/delete-a-git-branch-both-locally-and-remotely/2003515#2003515</a>
