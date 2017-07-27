@@ -2,24 +2,39 @@ site_name: Git
 google_analytics: ['UA-68978617-1', 'magizbox.com']
 pages:
 - "Home": "index.md"
-- "Installation": "install.md"
-- "Doc":
-  - "Commit": "commit.md"
-  - "Branch": "branch.md"
-  - "Tag": "tag.md"
+- "Get Started": "get_started.md"
+- "Git Basics":
+  - "Getting a git repository": "repository.md"
+  - "Commit: Recording changes to the repository": "commit.md"
+  - "Tagging": "tagging.md"
   - "Submodule": "submodule.md"
-  - "Config": "config.md"
-  - "Github": "github.md"
+  - "Git Configurations": "config.md"
   - "Workflow": "team_workflow.md"
+- "Git Branching": "branch.md"
+- "Github": "github.md"
+
 markdown_extensions:
     - footnotes
+
 extra_css:
-  - css/book.css
-  - css/course.css
-  - css/video.css
+  - components/magiz-c-book/src/book.css
+  - components/magiz-c-course/src/course.css
+  - components/magiz-c-video/src/video.css
+  - components/magiz-c-benchmark/src/benchmark.css
+  - components/magiz-c-paper/src/paper.css
+  - components/magiz-doc/style.css
+  - components/magiz-doc/highlight.css
+
 extra_javascript:
-  - js/underscore.js
-  - js/gspreadsheet.js
-  - js/book.js
-  - js/course.js
-  - js/video.js
+  - components/underscore/underscore.js
+  - components/magiz-c-book/src/gspreadsheet.js
+  - components/magiz-c-paper/src/paper.js
+  - components/magiz-c-course/src/course.js
+  - components/magiz-c-benchmark/src/benchmark.js
+  - components/magiz-c-benchmark/src/bootstrap-popup.js
+  - components/magiz-c-book/src/book.js
+  - components/magiz-c-video/src/video.js
+  - components/jquery/dist/jquery.js
+  - components/magiz-doc/doc.js
+  - components/magiz-doc/footer.js
+  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
